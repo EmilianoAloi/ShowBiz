@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+.portada {
+    background-image: url(../img/fondo.png);
+    background-size: cover;
+}
+
+.portada__texto {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 7rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
