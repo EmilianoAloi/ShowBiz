@@ -16,12 +16,13 @@ function show() {
 
 
 
-    while (band <= 1 || band >= 10) {
+    while (band < 1 || band > 10) {
 
         alert('Opcion no valida')
         show();
     }
 
+   
     switch (band) {
         case 1:
             band = band1;
@@ -56,7 +57,6 @@ function show() {
             band = 'Opción incorrecta'
             break;
     }
-
 }
 
 function campo() {
@@ -68,62 +68,7 @@ function campo() {
     }
 
 
-
 }
-
-function ticket() {
-    cantidad = prompt('Cuantas entradas para ' + sector + ' queres?');
-
- 
-    alert('Elegiste ' + cantidad + ' entradas ' + sector + ' para ir a ver a ' + band)
-    
-}
-
-
-
-logIn()
-
-
-show();
-
-    switch (band) {
-        case 1:
-            band = band1;
-            break;
-        case 2:
-            band = band2;
-            break;
-        case 3:
-            band = band3;
-            break;
-        case 4:
-            band = band4;
-            break;
-        case 5:
-            band = band5;
-            break;
-        case 6:
-            band = band6;
-            break;
-        case 7:
-            band = band7;
-            break;
-        case 8:
-            band = band8;
-            break;
-        case 9:
-            band = band9;
-        case 10:
-            band = band10;
-            break;
-        default:
-            band = 'Opción incorrecta'
-            break;
-    }
-
-
-
-campo();
 
 
 
@@ -146,3 +91,21 @@ let band7 = 'Lana del Rey'
 let band8 = 'Beach House'
 let band9 = 'Nine Inch Nails'
 let band10 = 'La Femme'
+
+// Inicio del Programa 
+
+logIn();
+
+
+show();
+
+ 
+
+campo();
+
+if (sector == 1) {
+    sector = 'Campo General'
+} else if (sector == 2) {
+    sector = 'Campo VIP'
+}
+
