@@ -8,6 +8,7 @@
 .portada {
     background-image: url(../img/fondo.png);
     background-size: cover;
+    
 }
 
 .portada__texto {
