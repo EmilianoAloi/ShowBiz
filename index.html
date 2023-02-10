@@ -6,37 +6,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShowBiz - Comprá tus tickets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar bg-dark" data-bs-theme="dark">
+        <nav class="navbar " data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand">ShowBiz</a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar Show" aria-label="Search">
-                    <button class="btn btn-dark" type="submit">Search</button>
-                </form>
+                <a class="navbar-brand ms-5">ShowBiz</a>
+                <i class="cart bi bi-cart4 me-5 "></i>
             </div>
+
         </nav>
     </header>
 
+    <main class="pt-5">
+
+        <section class="portada pt-4">
 
 
-    <section class="portada">
-        <div class="portada__texto">
-            <h1>ShowBiz</h1>
-            <h2>Comprá tu entrada a una nueva experiencia.</h2>
-        </div>
+            <div id="carouselExampleIndicators" class="portada__carousel  carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/img/imaginedragons.png " class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/massiveattack.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/theweeknd.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/fitopaez.jpg" class="d-block w-100" alt="...">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/img/hernancatanneo.jpg" class="d-block w-100" alt="...">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/img/lolaindigo.png" class="d-block w-100" alt="...">
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+
+            <div class="portada__texto">
+                <h2 class="mt-4">Disfrutá de tus artistas favoritos</h2>
+                <p class="mb-5">Comprá tu entrada a una nueva experiencia.</p>
+            </div>
+
+            <div>
+                <button type="button" class="btn btn-dark mt-2">VER MAS SHOWS</button>
+            </div>
+
+        </section>
+
+
+        <section class="destacados  pt-2 ">
+
+            <div class="destacados__texto container mt-5">
+                <h3>Destacados</h3>
+                <p>Estos son los eventos destacados para vos.</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <img class="destacados__band1 container pt-5" src="/img/massiveattack.jpg" alt="">
+            </div>
+            
+            <div class="container">
+                <img class="destacados__band1 container pt-5" src="/img/fitopaez.jpg" alt="">
+            </div>
+
+        </section>
+
+        <section class="shows pt-2">
+            <div class="shows__texto container mt-5">
+                <h3>Shows</h3>
+                <p>Los mejores shows los encontras acá.</p>
+                <div class="line"></div>
+            </div>
+        </section>
 
 
 
 
-    </section>
+    </main>
+
+
+
 
 
 
@@ -49,7 +142,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
-    <script src="./main.js"> </script>
+
 
 </body>
 
