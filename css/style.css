@@ -15,6 +15,11 @@ nav {
 
 }
 
+.navbar-brand {
+    font-weight: 800;
+    font-size: 25px;
+}
+
 .portada {
     background-color: #1F2023;
     display: flex;

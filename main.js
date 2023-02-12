@@ -1,9 +1,12 @@
 let user = 0;
 let pass = 0;
-let contador = 1;
+let menu = 0;
 let band = 0;
 let sector = 0;
 let cantidad = 0;
+let precio
+let precioFinal
+let arrayShop = []
 let band1 = 'Imagine Dragons'
 let band2 = 'Polo & Pan'
 let band3 = 'The Weeknd'
@@ -14,6 +17,17 @@ let band7 = 'Lana del Rey'
 let band8 = 'Beach House'
 let band9 = 'Nine Inch Nails'
 let band10 = 'La Femme'
+
+class Show {
+    constructor(band, sector, cantidad, precio) {
+        this.band = band
+        this.sector = sector
+        this.cantidad = cantidad
+        this.precio = precio
+        this.info = ` Banda: ${band} \n Sector: ${sector} \n Cantidad de entradas: ${cantidad} \n Precio: $${precio} `
+    }
+
+}
 
 function logIn() {
     user = prompt('Ingresá tu nombre de usuario').toLocaleLowerCase();
@@ -47,19 +61,97 @@ function campo() {
 
 }
 
-function ticket() {
+function entradas() {
     cantidad = prompt('Cuantas entradas para ' + sector + ' queres?');
     alert('Elegiste ' + cantidad + ' entradas ' + sector + ' para ir a ver a ' + band);
 }
 
-function pagar() {
+function subtotal() {
     if (sector == 'Campo General') {
-        let campoGeneral = 5000 * cantidad;
-        alert('El costo total de tus entradas es de $' + campoGeneral);
+        precio = 5000 * cantidad;
+        alert('El costo total de tus entradas es de $' + precio);
     } else if (sector == 'Campo VIP') {
-        let campoVip = 10000 * cantidad;
-        alert('El costo total de tus entradas es de $' + campoVip);
+        precio = 10000 * cantidad;
+        alert('El costo total de tus entradas es de $' + precio);
     }
+
+}
+
+function buy() {
+
+    show();
+
+    switch (band) {
+        case 1:
+            band = band1;
+            break;
+        case 2:
+            band = band2;
+            break;
+        case 3:
+            band = band3;
+            break;
+        case 4:
+            band = band4;
+            break;
+        case 5:
+            band = band5;
+            break;
+        case 6:
+            band = band6;
+            break;
+        case 7:
+            band = band7;
+            break;
+        case 8:
+            band = band8;
+            break;
+        case 9:
+            band = band9;
+        case 10:
+            band = band10;
+            break;
+    }
+
+    campo();
+
+    if (sector == 1) {
+        sector = 'Campo General'
+    } else if (sector == 2) {
+        sector = 'Campo VIP'
+    }
+
+    entradas();
+
+    subtotal();
+
+    const evento = new Show(band, sector, cantidad, precio);
+
+    console.log(evento)
+    alert(evento.info)
+    arrayShop.push(evento)
+}
+
+function gift() {
+
+
+    for (let i = 0; i < arrayShop.length; i++) {
+        if (arrayShop[i].cantidad >= 2) {
+            alert('Con la compra de mas de 2 o mas entradas para Campo Vip tenes estacionamiento gratuito!!')
+        }
+
+    }
+
+ //   parking = arrayShop.filter(evento.sector == 'Campo Vip')
+
+
+}
+
+function saludar() {
+    gift()
+    arrayShop.forEach((evento) => {
+        alert(`Disfruta de ver a ${evento.band}`)
+    })
 }
 
 
@@ -67,53 +159,26 @@ function pagar() {
 
 logIn();
 
-show();
 
-switch (band) {
-    case 1:
-        band = band1;
-        break;
-    case 2:
-        band = band2;
-        break;
-    case 3:
-        band = band3;
-        break;
-    case 4:
-        band = band4;
-        break;
-    case 5:
-        band = band5;
-        break;
-    case 6:
-        band = band6;
-        break;
-    case 7:
-        band = band7;
-        break;
-    case 8:
-        band = band8;
-        break;
-    case 9:
-        band = band9;
-    case 10:
-        band = band10;
-        break;
-    default:
-        band = 'Opción incorrecta'
-        break;
+while (menu != 3) {
+    menu = prompt('1. Comprar tickets \n 2. Ver Carrito en consola \n 3. Salir')
+    if (menu == 1) {
+        buy();
+    } else if (menu == 2) {
+        console.log(arrayShop)
+    } else {
+        saludar();
+    }
 }
 
-campo();
 
-if (sector == 1) {
-    sector = 'Campo General'
-} else if (sector == 2) {
-    sector = 'Campo VIP'
-}
 
-ticket();
 
-pagar();
+
+
+
+
+
+
 
 
