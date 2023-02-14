@@ -4,19 +4,21 @@ let menu = 0;
 let band = 0;
 let sector = 0;
 let cantidad = 0;
-let precio
-let precioFinal
+let precio = 0;
+let subTotal = [];
+let precioFinal = 0;
+let parking = 0;
 let arrayShop = []
-let band1 = 'Imagine Dragons'
-let band2 = 'Polo & Pan'
-let band3 = 'The Weeknd'
-let band4 = 'Cigarrets After Sex'
-let band5 = 'Muse'
-let band6 = 'Nicolas Jaar'
-let band7 = 'Lana del Rey'
-let band8 = 'Beach House'
-let band9 = 'Nine Inch Nails'
-let band10 = 'La Femme'
+let band1 = 'Imagine Dragons';
+let band2 = 'Polo & Pan';
+let band3 = 'The Weeknd';
+let band4 = 'Cigarrets After Sex';
+let band5 = 'Muse';
+let band6 = 'Nicolas Jaar';
+let band7 = 'Lana del Rey';
+let band8 = 'Beach House';
+let band9 = 'Nine Inch Nails';
+let band10 = 'La Femme';
 
 class Show {
     constructor(band, sector, cantidad, precio) {
@@ -25,6 +27,7 @@ class Show {
         this.cantidad = cantidad
         this.precio = precio
         this.info = ` Banda: ${band} \n Sector: ${sector} \n Cantidad de entradas: ${cantidad} \n Precio: $${precio} `
+
     }
 
 }
@@ -62,17 +65,22 @@ function campo() {
 }
 
 function entradas() {
-    cantidad = prompt('Cuantas entradas para ' + sector + ' queres?');
-    alert('Elegiste ' + cantidad + ' entradas ' + sector + ' para ir a ver a ' + band);
+
+    do {
+        cantidad = parseInt(prompt('Cuantas entradas para ' + sector + ' queres?'))
+
+
+    } while (isNaN(cantidad))
+
 }
 
-function subtotal() {
+
+
+function costo() {
     if (sector == 'Campo General') {
         precio = 5000 * cantidad;
-        alert('El costo total de tus entradas es de $' + precio);
     } else if (sector == 'Campo VIP') {
         precio = 10000 * cantidad;
-        alert('El costo total de tus entradas es de $' + precio);
     }
 
 }
@@ -123,35 +131,49 @@ function buy() {
 
     entradas();
 
-    subtotal();
+    costo();
 
     const evento = new Show(band, sector, cantidad, precio);
 
-    console.log(evento)
+
     alert(evento.info)
+
+
     arrayShop.push(evento)
 }
 
 function gift() {
 
+    parking = arrayShop.some(evento => evento.sector == 'Campo VIP')
 
-    for (let i = 0; i < arrayShop.length; i++) {
-        if (arrayShop[i].cantidad >= 2) {
-            alert('Con la compra de mas de 2 o mas entradas para Campo Vip tenes estacionamiento gratuito!!')
-        }
+    if (parking) {
+        alert(' BENEFICIO EXCLUSIVO \n Por la compra de entradas VIP tenes estacionamiento gratuito.')
+        console.log('Estacionamiento gratuito: Si')
+    } else {
+        console.log('Estacionamiento gratuito: No')
 
     }
-
- //   parking = arrayShop.filter(evento.sector == 'Campo Vip')
-
-
 }
 
+
+
+
+
 function saludar() {
-    gift()
+
     arrayShop.forEach((evento) => {
-        alert(`Disfruta de ver a ${evento.band}`)
+        subTotal.push(evento.precio)
     })
+
+    for (let i = 0; i < subTotal.length; i++) {
+        precioFinal = precioFinal + subTotal[i]
+    }
+
+    console.log('El costo de total de tus entradas es de: $ ' + precioFinal)
+
+    alert('El costo de total de tus entradas es de $' + precioFinal)
+
+    gift()
 }
 
 
@@ -161,14 +183,15 @@ logIn();
 
 
 while (menu != 3) {
-    menu = prompt('1. Comprar tickets \n 2. Ver Carrito en consola \n 3. Salir')
+    menu = prompt(' 1. Comprar tickets \n 2. Ver Carrito en consola \n 3. Finalizar compra \n')
     if (menu == 1) {
         buy();
     } else if (menu == 2) {
         console.log(arrayShop)
-    } else {
+    } else if (menu == 3) {
         saludar();
-    }
+        alert('Gracias por su visita!')
+    } 
 }
 
 
