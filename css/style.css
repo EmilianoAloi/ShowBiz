@@ -60,7 +60,7 @@ h3 {
     font-size: 30px;
 }
 
-.btn {
+.btn-primary {
     font-size: 25px;
     width: 20rem;
 }
@@ -99,6 +99,10 @@ h3 {
     width: 80rem;
 }
 
+
+/* SHOWS
+*/
+
 .shows {
     background-color: #1F2023;
     color: white;
@@ -113,4 +117,33 @@ h3 {
 .shows__texto p {
     font-size: 30px;
 
+}
+
+.cuadricula {
+    display: flex;
+    gap: 2rem;
+}
+
+.card {
+    width: 17rem;
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+
+    
+.card-title {
+    color: black;
+}
+
+.btn-dark {
+
+    width: 100%;
+}
+
+.card-img-top {
+    width: 100%;
+    border-radius: 10px;
+    
 }
