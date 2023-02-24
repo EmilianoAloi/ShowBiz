@@ -1,3 +1,51 @@
+import {shows} from './objets.js'
+
+
+
+const gridShows = document.querySelector('#gridShows');
+
+
+function cargarShows() {
+
+shows.forEach(show => {
+
+    const article = document.createElement('article')
+    article.classList.add('col-12');
+    article.classList.add('col-sm-3');
+    article.classList.add('card');
+    article.classList.add('mb-4');
+
+    article.innerHTML = `
+    <img src="${show.img}" class="card-img-top mt-3" alt="${show.band}">
+    <div class="card-body d-flex flex-column align-items-center">
+        <h5 class="card-title">${show.band}</h5>
+        <p class="card-text">${show.date} - ${show.location}</p>
+        <a href="../page/contacto.html" id = '${show.id}' class="btn btn-dark">COMPRAR TICKETS</a>
+    </div>
+        `
+gridShows.append(article);
+
+})
+
+}
+
+cargarShows();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 let user = 0;
 let pass = 0;
 let menu = 0;
@@ -183,6 +231,6 @@ while (menu != 3) {
 
 
 
-
+*/
 
 

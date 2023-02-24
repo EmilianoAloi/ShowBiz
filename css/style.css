@@ -91,12 +91,10 @@ h3 {
     background-color: white;
 }
 
-.destacados__band1 {
-    width: 80rem;
-}
-
-.destacados__band2 {
-    width: 80rem;
+.destacados__img {
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 
 
@@ -132,9 +130,17 @@ h3 {
 }
 
 
+
     
 .card-title {
-    color: black;
+    font-weight: 600;
+}
+
+.card-text {
+font-style: italic;
+font-weight: 100;
+font-size: 15px !important;
+
 }
 
 .btn-dark {

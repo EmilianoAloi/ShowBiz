@@ -85,7 +85,7 @@
                 </button>
             </div>
 
-            <div class="portada__texto">
+            <div class="portada__texto container">
                 <h2 class="mt-4">Disfrutá de tus artistas favoritos</h2>
                 <p class="mb-5">Comprá tu entrada a una nueva experiencia.</p>
             </div>
@@ -105,13 +105,12 @@
                 <div class="line"></div>
             </div>
 
-            <div class="container">
-                <img class="destacados__band1 container pt-5" src="/img/massiveattack.jpg" alt="">
+            <div class="destacados__img container">
+                <img class="destacados__band container pt-5" src="/img/lafemmeFlyer.jpg" alt="">
+                <img class="destacados__band container pt-5" src="/img/massiveattack.jpg" alt="">
             </div>
 
-            <div class="container">
-                <img class="destacados__band1 container pt-5" src="/img/fitopaez.jpg" alt="">
-            </div>
+
 
         </section>
 
@@ -123,102 +122,11 @@
 
                 <div class="container">
 
-                    <div class="row d-flex justify-content-around pt-2">
-                        <article class="col-12 col-lg-3 card  mb-4" >
-                            <img src="./img/lafemmeMini.jpg" class="card-img-top mt-3" alt="La Femme">
-                            <div class="card-body d-flex flex-column align-items-center ">
-                                <a href="../page/contacto.html" class="btn btn-dark">COMPRAR TICKETS</a>
-                            </div>
-                        </article>
-    
-                        <article class="col-12 col-lg-3 card  mb-4">
-                            <img src="./img/aboveMini.jpg" class="card-img-top mt-3" alt="Above & Beyond">
-                            <div class="card-body d-flex flex-column align-items-center">
-                                <a href="../page/contacto.html" class="btn btn-dark">COMPRAR TICKETS</a>
-                            </div>
-                        </article>
-    
-                        <article class="col-12 col-lg-3 card  mb-4">
-                            <img src="./img/lilaMini.png" class="card-img-top mt-3" alt="Lila Downs">
-                            <div class="card-body d-flex flex-column align-items-center">
-                                <a href="../page/contacto.html" class="btn btn-dark">COMPRAR TICKETS</a>
-                            </div>
-                        </article>
-    
-                        <article class="col-12 col-lg-3 card  mb-4">
-                            <img src="./img/afterlifeMini.jpg" class="card-img-top mt-3" alt="Afterlife">
-                            <div class="card-body d-flex flex-column align-items-center">
-                                <a href="../page/contacto.html" class="btn btn-dark">COMPRAR TICKETS</a>
-                            </div>
-                        </article>
-    
-                    </div>
-
-                    <div class="row d-flex justify-content-around pt-2">
-                        <article class="col-12 col-lg-3 card  mb-4" >
-                            <img src="./img/lanaMini.jpg" class="card-img-top mt-3" alt="Lana Del Rey">
-                            <div class="card-body d-flex flex-column align-items-center ">
-                                <a href="../page/contacto.html" class="btn btn-dark">COMPRAR TICKETS</a>
-                            </div>
-                        </article>
-    
-                        <article class="col-12 col-lg-3 card  mb-4">
-                            <img src="./img/ninMini.jpg" class="card-img-top mt-3" alt="Nine Inch Nails">
-                            <div class="card-body d-flex flex-column align-items-center">
-                                <a href="../page/contacto.html" class="btn btn-dark">COMPRAR TICKETS</a>
-                            </div>
-                        </article>
-    
-                        <article class="col-12 col-lg-3 card  mb-4">
-                            <img src="./img/beachhouseMini.jpg" class="card-img-top mt-3" alt="Lila Downs">
-                            <div class="card-body d-flex flex-column align-items-center">
-                                <a href="../page/contacto.html" class="btn btn-dark">COMPRAR TICKETS</a>
-                            </div>
-                        </article>
-    
-                        <article class="col-12 col-lg-3 card  mb-4">
-                            <img src="./img/cigarretsMini.jpg" class="card-img-top mt-3" alt="Cigarrets After Sex">
-                            <div class="card-body d-flex flex-column align-items-center">
-                                <a href="../page/contacto.html" class="btn btn-dark">COMPRAR TICKETS</a>
-                            </div>
-                        </article>
-    
-                    </div>
-
-                    <div class="row d-flex justify-content-around pt-2">
-                        <article class="col-12 col-lg-3 card  mb-4" >
-                            <img src="./img/agaragarMini.png" class="card-img-top mt-3" alt="Agar Agar">
-                            <div class="card-body d-flex flex-column align-items-center ">
-                                <a href="../page/contacto.html" class="btn btn-dark">COMPRAR TICKETS</a>
-                            </div>
-                        </article>
-    
-                        <article class="col-12 col-lg-3 card  mb-4">
-                            <img src="./img/ninMini.jpg" class="card-img-top mt-3" alt="Nine Inch Nails">
-                            <div class="card-body d-flex flex-column align-items-center">
-                                <a href="../page/contacto.html" class="btn btn-dark">COMPRAR TICKETS</a>
-                            </div>
-                        </article>
-    
-                        <article class="col-12 col-lg-3 card  mb-4">
-                            <img src="./img/beachhouseMini.jpg" class="card-img-top mt-3" alt="Lila Downs">
-                            <div class="card-body d-flex flex-column align-items-center">
-                                <a href="../page/contacto.html" class="btn btn-dark">COMPRAR TICKETS</a>
-                            </div>
-                        </article>
-    
-                        <article class="col-12 col-lg-3 card  mb-4">
-                            <img src="./img/cigarretsMini.jpg" class="card-img-top mt-3" alt="Cigarrets After Sex">
-                            <div class="card-body d-flex flex-column align-items-center">
-                                <a href="../page/contacto.html" class="btn btn-dark">COMPRAR TICKETS</a>
-                            </div>
-                        </article>
-    
+                    <div id="gridShows" class="row d-flex justify-content-around pt-2">
+                        <!-- cards generadas en js -->
                     </div>
 
                 </div>
-
-
 
 
         </section>
@@ -243,7 +151,7 @@
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
 
-    <script src="/man.js"></script>
+    <script src="./js/main.js" type="module"></script>
 </body>
 
 </html>
