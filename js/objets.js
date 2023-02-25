@@ -98,7 +98,7 @@ const shows = [
     {
         id: 'show-13',
         band: 'Imagine Dragons',
-        img: './img/imaginedragonsMini.jpg',
+        img: './img/imaginedragonsMini.png',
         date: '23/05/2023',
         eventTime: '21 hs',
         location: 'Complejo Art Media',
@@ -106,7 +106,7 @@ const shows = [
     {
         id: 'show-14',
         band: 'Air',
-        img: './img/AirMini.jpg',
+        img: './img/airMini.png',
         date: '23/05/2023',
         eventTime: '21 hs',
         location: 'Complejo Art Media',
