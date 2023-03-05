@@ -21,7 +21,9 @@ nav {
 }
 
 .portada {
-    background-color: #1F2023;
+    background-color: #1F2023; 
+    
+    
     display: flex;
     flex-direction: column;
     flex-direction: column;
@@ -150,4 +152,48 @@ font-size: 15px !important;
     width: 100%;
     border-radius: 10px;
     
+}
+
+
+
+
+/* Modal */
+
+.modal-content {
+color: antiquewhite;
+    background-image: url(../img/fondo.png);
+    background-size:cover ;
+}
+
+.imgModal {
+    width: 30%;
+    border-radius: 10px;
+}
+
+
+.typeTickets {
+
+    width: 85%;
+    height: 70px;
+    border-radius: 10px;
+
+}
+
+.btn-dark {
+    border-radius: 0px;
+    
+
+}
+
+
+
+
+
+/* PAG TICKET */
+
+.buyTicket {
+
+    background-color: #1F2023;
+    color: white;
+
 }

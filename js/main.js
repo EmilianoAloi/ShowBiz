@@ -1,35 +1,110 @@
-import {shows} from './objets.js'
+import { shows } from './objets.js'
+
+let shop = []
+let showSelected = []
 
 
 
 const gridShows = document.querySelector('#gridShows');
 
 
-function cargarShows() {
+function displayShows() {
 
-shows.forEach(show => {
+    shows.forEach(show => {
 
-    const article = document.createElement('article')
-    article.classList.add('col-12');
-    article.classList.add('col-sm-3');
-    article.classList.add('card');
-    article.classList.add('mb-4');
+        const article = document.createElement('article')
+        article.classList.add('col-12');
+        article.classList.add('col-sm-3');
+        article.classList.add('card');
+        article.classList.add('mb-4');
 
-    article.innerHTML = `
+        article.innerHTML = `
     <img src="${show.img}" class="card-img-top mt-3" alt="${show.band}">
     <div class="card-body d-flex flex-column align-items-center">
         <h5 class="card-title">${show.band}</h5>
         <p class="card-text">${show.date} - ${show.location}</p>
-        <a href="../page/contacto.html" id = '${show.id}' class="btn btn-dark">COMPRAR TICKETS</a>
+        <button id = '${show.id}' class="btn btn-dark btn-show" data-bs-toggle="modal" data-bs-target="#staticBackdrop">COMPRAR TICKETS</button>
     </div>
         `
-gridShows.append(article);
+        gridShows.append(article);
+    })
+}
+
+displayShows();
+
+
+const buyButtons = document.querySelectorAll('.btn-show');
+
+
+buyButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+
+        showSelected = shows.filter(show => show.id === e.currentTarget.id);
+        console.log(showSelected)
+
+
+        const modalShow = document.querySelector('.modal-body')
+        showSelected.forEach((show) => {
+
+
+            modalShow.innerHTML = `
+                
+                <div class="container">
+
+                    <h3>${show.band}</h3>
+                    <div class='d-flex align-items-center justify-content-around'>
+                    <img src='${show.img}' class='imgModal mt-4'> 
+                        <div>
+                            <h4>Ciudad: ${show.city}</h4>
+                            <h4>Ciudad: ${show.adress}</h4>
+                            <h4>Fecha: ${show.date}</h4>
+                            <h4>Hora: ${show.eventTime}</h4>
+                            <h4>Direccion: ${show.adress}</h4>
+                            <h4>Estadio: ${show.location}</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="typeTickets d-flex  container justify-content-betwen mt-5 mb-5">
+                <button type="button" class="btn btn-dark">Ubicacion</button>
+                <button type="button" class="btn btn-dark">Campo Vip</button>
+                <button type="button" class="btn btn-dark">Cantidad</button>
+                <button type="button" class="btn btn-dark">3</button>
+                <button type="button" class="buyTicket btn btn-dark" data-bs-dismiss="modal" >COMPRAR TICKETS</button>
+            </div>
+            
+            `
+            
+const btnBuy = document.querySelector('.buyTicket')
+
+btnBuy.addEventListener('click', () => {
+
+    Swal.fire({
+        title: 'Neceistas hacer algun cambio?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Esta perfectooo',
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          Swal.fire('Añadido al carrito', '', 'success')
+        } else if (result.isDenied) {
+          Swal.fire('Changes are not saved', '', 'info')
+        }
+      })
 
 })
 
-}
 
-cargarShows();
+        })
+    })
+})
+
+
+
+
+
+
 
 
 

@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -33,7 +34,7 @@
 
 
             <div id="carouselExampleControls" class="portada__carousel carousel slide" data-bs-ride="carousel">
-                
+
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="./img/imaginedragons.png" class="d-block w-100" alt="...">
@@ -56,16 +57,18 @@
                         <img src="./img/lolaindigo.png" class="d-block w-100" alt="...">
                     </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Anterior</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Siguiente</span>
-                      </button>
-                    </div>
-           
+                    </button>
+                </div>
+
             </div>
 
             <div class="portada__texto container">
@@ -97,20 +100,48 @@
 
         </section>
 
-        <section class="shows pt-2">
+        <section class="shows pt-2 ">
             <div class="shows__texto container mt-5">
                 <h3>Shows</h3>
                 <p>Los mejores shows los encontras acá.</p>
                 <div class="line mb-5"></div>
+            </div>
 
-                <div class="container">
-                    <div id="gridShows" class="row d-flex justify-content-around pt-2">
-                        <!-- show cards generadas en js -->
-                    </div>
+            <div class="container">
+                <div id="gridShows" class="row d-flex justify-content-around pt-2">
+                    <!-- show cards generadas en js -->
                 </div>
+            </div>
         </section>
 
 
+
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        
 
 
     </main>
@@ -124,13 +155,15 @@
 
 
 
+    <script src="./js/main.js" type="module"></script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
+        <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script src="./js/main.js" type="module"></script>
 </body>
 
 </html>
