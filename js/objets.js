@@ -5,6 +5,8 @@ const shows = [
         img: './img/lafemmeMini.jpg',
         date: '23/05/2023',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         city: 'Buenos Aires ',
         location: 'Complejo Art Media',
         adress: 'Cabildo 1520',
@@ -16,7 +18,8 @@ const shows = [
         date: '23/05/2023',
         city: 'Buenos Aires ',
         eventTime: '21 hs',
-        adress: 'Cabildo 1520',
+        sector: '',
+        quantity: '',
         adress: 'Cabildo 1520',
         location: 'Complejo Art Media',
     },
@@ -28,6 +31,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Luna Park',
     },
     {
@@ -38,6 +43,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Complejo Art Media',
     },
     {
@@ -48,6 +55,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Luna Park',
     },
     {
@@ -58,6 +67,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Complejo Art Media',
     },
     {
@@ -68,6 +79,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Complejo Art Media',
     },
     {
@@ -78,6 +91,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Complejo Art Media',
     },
     {
@@ -88,6 +103,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Complejo Art Media',
     },
     {
@@ -98,6 +115,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Complejo Art Media',
     },
     {
@@ -108,6 +127,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Complejo Art Media',
     },
     {
@@ -118,6 +139,10 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
+        sector: '',
+        quantity: '',
         location: 'Complejo Art Media',
     },
     {
@@ -128,6 +153,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Complejo Art Media',
     },
     {
@@ -138,6 +165,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Complejo Art Media',
     },
     {
@@ -148,6 +177,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Complejo Art Media',
     },
     {
@@ -158,6 +189,8 @@ const shows = [
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
         eventTime: '21 hs',
+        sector: '',
+        quantity: '',
         location: 'Complejo Art Media',
     },
 
