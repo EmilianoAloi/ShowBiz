@@ -21,9 +21,9 @@ nav {
 }
 
 .portada {
-    background-color: #1F2023; 
-    
-    
+    background-color: #1F2023;
+
+
     display: flex;
     flex-direction: column;
     flex-direction: column;
@@ -94,9 +94,9 @@ h3 {
 }
 
 .destacados__img {
-display: flex;
-flex-direction: column;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -131,15 +131,15 @@ justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-    
+
 .card-title {
     font-weight: 600;
 }
 
 .card-text {
-font-style: italic;
-font-weight: 100;
-font-size: 15px !important;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 15px !important;
 
 }
 
@@ -151,7 +151,7 @@ font-size: 15px !important;
 .card-img-top {
     width: 100%;
     border-radius: 10px;
-    
+
 }
 
 
@@ -160,9 +160,9 @@ font-size: 15px !important;
 /* Modal */
 
 .modal-content {
-color: antiquewhite;
+    color: antiquewhite;
     background-image: url(../img/fondo.png);
-    background-size:cover ;
+    background-size: cover;
 }
 
 .imgModal {
@@ -176,12 +176,13 @@ color: antiquewhite;
     width: 85%;
     height: 70px;
     border-radius: 10px;
+    border: 0;
 
 }
 
 .btn-dark {
     border-radius: 0px;
-    
+
 
 }
 
@@ -196,4 +197,26 @@ color: antiquewhite;
     background-color: #1F2023;
     color: white;
 
+}
+
+
+
+.sector-select {
+    background-color: #1F2023;
+    color: white;
+    width: 220px;
+    height: 70px;
+    border-radius: 0;
+    border: 0;
+    padding: 20px;
+
+}
+
+.qty-select {
+    background-color: #1F2023;
+    color: white;
+    height: 70px;
+    border-radius: 0;
+    border: 0;
+    padding: 20px;  
 }
