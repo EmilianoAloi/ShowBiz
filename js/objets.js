@@ -10,6 +10,9 @@ const shows = [
         city: 'Buenos Aires ',
         location: 'Complejo Art Media',
         adress: 'Cabildo 1520',
+        price: '',
+        subtotal: '',
+
     },
     {
         id: 'show-2',
@@ -22,6 +25,8 @@ const shows = [
         quantity: '',
         adress: 'Cabildo 1520',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-3',
@@ -34,6 +39,8 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Luna Park',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-4',
@@ -46,6 +53,8 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-5',
@@ -58,6 +67,8 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Luna Park',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-6',
@@ -70,6 +81,8 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-7',
@@ -82,11 +95,15 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-8',
         band: 'Peces Raros',
         img: './img/pecesrarosMini.jpg',
+        price: '',
+        subtotal: '',
         date: '23/05/2023',
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
@@ -94,11 +111,15 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-9',
         band: 'Ibiza Pareo',
         img: './img/ibizapareoMini.jpg',
+        price: '',
+        subtotal: '',
         date: '23/05/2023',
         city: 'Buenos Aires ',
         adress: 'Cabildo 1520',
@@ -106,6 +127,8 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-10',
@@ -118,6 +141,8 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-11',
@@ -130,6 +155,8 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-12',
@@ -144,6 +171,8 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-13',
@@ -156,6 +185,8 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-14',
@@ -168,6 +199,8 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-15',
@@ -180,6 +213,8 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
     {
         id: 'show-16',
@@ -192,6 +227,8 @@ const shows = [
         sector: '',
         quantity: '',
         location: 'Complejo Art Media',
+        price: '',
+        subtotal: '',
     },
 
 ]

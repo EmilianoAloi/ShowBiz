@@ -104,7 +104,18 @@ buyButtons.forEach(btn => {
                 showSelected.forEach(show => {
                     show.sector = sectorSelect
                     show.quantity = qtySelected
+
+                    if (sectorSelect == 'Campo General') {
+                        show.price = 5000
+                    } else if (sectorSelect == 'Campo VIP') {
+                        show.price = 10000
+                    }
+
+                    show.subtotal = show.quantity * show.price
                 })
+
+
+
 
                 shop.push(show)
                 console.log(shop)
@@ -147,6 +158,200 @@ function numberShop() {
 
 }
 
+
+
+let modalShop = document.querySelector('.modal-container ')
+
+
+cart.addEventListener('click', () => {
+
+    modalShop.innerHTML = '',
+
+        shop.forEach((show) => {
+
+            let div = document.createElement('div');
+            div.classList.add('showShop');
+            div.classList.add('container');
+            div.classList.add('d-flex');
+            div.classList.add('align-items-center');
+            div.classList.add('gap-5');
+            div.classList.add('pt-2');
+
+
+            div.innerHTML = `
+    
+    <img class="imgShop" src="${show.img}" alt="Agar Agar">
+    <div class="infoShop bandShop d-flex flex-column mt-2 mb-5">
+        <h4 class="pb-4 pt-1 pe-4">SHOW</h4>
+        <h5>${show.band}</h5>
+    </div>
+    <div class="infoShop d-flex flex-column mb-5 ">
+        <h4 class="pb-4 pt-1 pe-4">UBICACION</h4>
+        <h5>${show.sector}</h5>
+    </div>
+    <div class="infoShop d-flex flex-column mb-5 ">
+        <h4 class="pb-4 pt-1 pe-4">CANTIDAD</h4>
+        <h5>${show.quantity}</h5>
+    </div>
+    <div class="infoShop d-flex flex-column mb-5 ">
+        <h4 class="pb-4 pt-1 pe-4">PRECIO </h4>
+        <h5>$${show.price}</h5>
+    </div>
+    <div class="infoShop d-flex flex-column mb-5 ms-4">
+        <h4 class="pb-4 pt-1 pe-4">SUBTOTAL</h4>
+        <h5>$${show.subtotal}</h5>
+    </div>
+        `;
+
+
+
+            modalShop.append(div);
+
+
+
+        });
+
+});
+
+
+
+/*
+
+    shop.forEach((tickets) => {
+
+        let div = document.createElement('div');
+        div.classList.add('showShop');
+        div.classList.add('container');
+        div.classList.add('d-flex');
+        div.classList.add('align-items-center');
+        div.classList.add('gap-5');
+        div.classList.add('pt-2');
+
+        div.innerHTML = `
+    
+    <img class="imgShop" src="${show.img}" alt="Agar Agar">
+    <div class="infoShop d-flex flex-column mb-5">
+        <h4 class="pb-4 pt-1 pe-4">SHOW</h4>
+        <h5>${show.band}</h5>
+    </div>
+    <div class="infoShop d-flex flex-column mb-5 ">
+        <h4 class="pb-4 pt-1 pe-4">UBICACION</h4>
+        <h5>${show.sector}</h5>
+    </div>
+    <div class="infoShop d-flex flex-column mb-5 ">
+        <h4 class="pb-4 pt-1 pe-4">CANTIDAD</h4>
+        <h5>${show.quantity}</h5>
+    </div>
+    <div class="infoShop d-flex flex-column mb-5 ">
+        <h4 class="pb-4 pt-1 pe-4">PRECIO </h4>
+        <h5>${show.eventTime}</h5>
+    </div>
+    <div class="infoShop d-flex flex-column mb-5 ms-4">
+        <h4 class="pb-4 pt-1 pe-4">SUBTOTAL</h4>
+        <h5>${show.eventTime}</h5>
+    </div>
+        `;
+
+
+
+        modalShop.append(div);
+
+
+
+    });
+
+
+
+
+
+/*
+
+ const modalShop = document.getElementById('#modalBody-container')
+
+cart.addEventListener('click', (e) => {
+
+    shop.forEach((show) => {
+        const div = document.createElement('div')
+        div.classList.add('showShop')
+        div.classList.add('container')
+        div.classList.add('d-flex')
+        div.classList.add('align-items-center')
+        div.classList.add('gap-5')
+        div.classList.add('pt-2')
+        div.innerHTML = `
+                            <img class="imgShop" src="${show.img}" alt="Agar Agar">
+                            <div class="infoShop d-flex flex-column mb-5">
+                                <h4 class="pb-4 pt-1 pe-4">SHOW</h4>
+                                <h5>${show.band}</h5>
+                            </div>
+                            <div class="infoShop d-flex flex-column mb-5 ">
+                                <h4 class="pb-4 pt-1 pe-4">UBICACION</h4>
+                                <h5>${show.sector}</h5>
+                            </div>
+                            <div class="infoShop d-flex flex-column mb-5 ">
+                                <h4 class="pb-4 pt-1 pe-4">CANTIDAD</h4>
+                                <h5>${show.quantity}</h5>
+                            </div>
+                            <div class="infoShop d-flex flex-column mb-5 ">
+                                <h4 class="pb-4 pt-1 pe-4">PRECIO </h4>
+                                <h5>${show.eventTime}</h5>
+                            </div>
+                            <div class="infoShop d-flex flex-column mb-5 ms-4">
+                                <h4 class="pb-4 pt-1 pe-4">SUBTOTAL</h4>
+                                <h5>${show.eventTime}</h5>
+                            </div>
+`
+        cart.append(div);
+    })
+})
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+showShop container d-flex align-items-center gap-5 pt-2
+
+
+shows.forEach(show => {
+
+    const article = document.createElement('article')
+    article.classList.add('col-12');
+    article.classList.add('col-sm-3');
+    article.classList.add('card');
+    article.classList.add('mb-4');
+
+    article.innerHTML = `
+<img src="${show.img}" class="card-img-top mt-3" alt="${show.band}">
+<div class="card-body d-flex flex-column align-items-center">
+    <h5 class="card-title">${show.band}</h5>
+    <p class="card-text">${show.date} - ${show.location}</p>
+    <button id = '${show.id}' class="btn btn-dark btn-show" data-bs-toggle="modal" data-bs-target="#staticBackdrop">COMPRAR TICKETS</button>
+</div>
+    `
+    gridShows.append(article);
+})
+
+
+
+*/
 
 
 
