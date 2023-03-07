@@ -12,7 +12,6 @@ header {
 
 nav {
     background-color: #1F2023;
-
 }
 
 .navbar-brand {
@@ -22,14 +21,11 @@ nav {
 
 .portada {
     background-color: #1F2023;
-
-
     display: flex;
     flex-direction: column;
     flex-direction: column;
     align-items: center;
 }
-
 
 .portada__texto {
     color: white;
@@ -56,7 +52,6 @@ h3 {
     font-size: 30px;
 }
 
-
 .cart {
     color: white;
     font-size: 30px;
@@ -74,9 +69,7 @@ padding: 10px;
     width: 20rem;
 }
 
-
-/* Destacados
-*/
+/* Destacados */
 
 .destacados {
     background-color: #1F2023;
@@ -86,12 +79,10 @@ padding: 10px;
 .destacados__texto h3 {
     font-size: 35px;
     font-weight: 700;
-
 }
 
 .destacados__texto p {
     font-size: 30px;
-
 }
 
 .line {
@@ -107,8 +98,7 @@ padding: 10px;
 }
 
 
-/* SHOWS
-*/
+/* SHOWS */
 
 .shows {
     background-color: #1F2023;
@@ -118,12 +108,10 @@ padding: 10px;
 .shows__texto h3 {
     font-size: 35px;
     font-weight: 700;
-
 }
 
 .shows__texto p {
     font-size: 30px;
-
 }
 
 .cuadricula {
@@ -147,22 +135,16 @@ padding: 10px;
     font-style: italic;
     font-weight: 100;
     font-size: 15px !important;
-
 }
 
 .btn-dark {
-
     width: 100%;
 }
 
 .card-img-top {
     width: 100%;
     border-radius: 10px;
-
 }
-
-
-
 
 /* Modal */
 
@@ -179,28 +161,20 @@ padding: 10px;
 
 
 .typeTickets {
-
     width: 85%;
     height: 70px;
     border-radius: 10px;
     border: 0;
-
 }
 
 .btn-dark {
     border-radius: 0px;
-
-
 }
 
 .buyTicket {
-
     background-color: #1F2023;
     color: white;
-
 }
-
-
 
 .sector-select {
     background-color: #1F2023;
@@ -210,7 +184,6 @@ padding: 10px;
     border-radius: 0;
     border: 0;
     padding: 10px;
-
 }
 
 .qty-select {
@@ -223,28 +196,22 @@ padding: 10px;
 }
 
 
-/* PAG SHOP */
+/* SHOP */
 
 .shop {
     background-color: #1F2023;
 }
 
 .modal-container {
-
-width: 1100px;
 background: rgba(217, 217, 217, 0.5);
 border-radius: 15px;
 }
 
 .imgShop {
-
     width: 125px;
     border-radius: 15px;
     margin: 10px;
     margin-left: 20px;
 }
 
-.bandShop {
 
-
-}
