@@ -62,6 +62,13 @@ h3 {
     font-size: 30px;
 }
 
+.qtyTickets {
+color: white;
+background-color: rgba(156, 149, 196, 0.466);
+border-radius: 10px;
+padding: 10px;
+}
+
 .btn-primary {
     font-size: 25px;
     width: 20rem;
@@ -159,7 +166,7 @@ h3 {
 
 /* Modal */
 
-.modal-content {
+.ticketSelection {
     color: antiquewhite;
     background-image: url(../img/fondo.png);
     background-size: cover;
@@ -185,12 +192,6 @@ h3 {
 
 
 }
-
-
-
-
-
-/* PAG TICKET */
 
 .buyTicket {
 
@@ -219,4 +220,19 @@ h3 {
     border-radius: 0;
     border: 0;
     padding: 20px;  
+}
+
+
+/* PAG SHOP */
+
+.shop {
+    background-color: #1F2023;
+}
+
+.panel {
+
+width: 1186px;
+left: 130px;
+background: rgba(217, 217, 217, 0.5);
+border-radius: 52px;
 }

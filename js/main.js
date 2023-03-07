@@ -7,7 +7,6 @@ let showSelected = []
 
 const gridShows = document.querySelector('#gridShows');
 
-
 function displayShows() {
 
     shows.forEach(show => {
@@ -40,25 +39,15 @@ function ticketSelection() {
     })
     shop.push(show)
     console.log(shop)
-
-
 }
-
-
 
 displayShows();
 
-
 const buyButtons = document.querySelectorAll('.btn-show');
-
-
 buyButtons.forEach(btn => {
 
     btn.addEventListener('click', (e) => {
         showSelected = shows.filter(show => show.id === e.currentTarget.id);
-
-
-
 
         const modalShow = document.querySelector('.modal-body')
         showSelected.forEach((show) => {
@@ -107,11 +96,6 @@ buyButtons.forEach(btn => {
                 </form>
             `
 
-
-
-
-
-
             function ticketSelection() {
 
                 let sectorSelect = document.getElementById('sector-select').value;
@@ -124,6 +108,7 @@ buyButtons.forEach(btn => {
 
                 shop.push(show)
                 console.log(shop)
+                numberShop();
 
                 const Toast = Swal.mixin({
                     toast: true,
@@ -132,47 +117,35 @@ buyButtons.forEach(btn => {
                     timer: 3000,
                     timerProgressBar: true,
                     didOpen: (toast) => {
-                      toast.addEventListener('mouseenter', Swal.stopTimer)
-                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
                     }
-                  })
-                  
-                  Toast.fire({
+                })
+
+                Toast.fire({
                     icon: 'success',
                     title: 'Tickets agregados al Carrito'
-                  })
+                })
             }
-
-
-
-
 
             let ticketSelected = document.querySelector('.buyTicket');
             ticketSelected.addEventListener('click', () => {
                 ticketSelection();
             })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         })
     })
 })
 
+const qtyTickets = document.querySelector('#qtyTickets');
 
 
+function numberShop() {
+
+    let numberTickets = shop.length
+    qtyTickets.innerText = numberTickets;
+    console.log(numberTickets)
+
+}
 
 
 
