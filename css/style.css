@@ -4,10 +4,17 @@
     box-sizing: border-box;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p{
+    margin: 0px !important;
+
+}
+
 header {
     position: fixed;
     z-index: 10;
     width: 100vw;
+    border: 10px;
+    border-bottom: #292c36;
 }
 
 nav {
@@ -17,7 +24,52 @@ nav {
 .navbar-brand {
     font-weight: 800;
     font-size: 25px;
+    font-style: oblique;
 }
+
+.shop-icon {
+    background-color: #292c36;
+    font-size: 25px !important;
+    border: 0px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+}
+
+.shop-icon:hover {
+    background-color: #35373d;
+}
+
+
+.qtyTickets-icon {
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 100px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 1px;
+    background-color: red;
+    background-size: contain;
+    size-adjust: 10px;
+
+}
+
+
+@media (max-width: 370px) {
+
+    .navbar-brand {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+}
+
+
 
 .portada {
     background-color: #1F2023;
@@ -32,16 +84,67 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+
 }
+
+
 
 .portada__texto p {
     font-size: 30px;
+    font-size-adjust: initial;
 }
 
 .portada__carousel {
     width: 100%;
 }
 
+
+@media (max-width: 600px) {
+
+    .portada__texto {
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portada__texto h2 {
+        font-size: 25px !important;
+
+    }
+
+    .portada__texto p {
+        font-size: 15px !important;
+
+    }
+
+    .btn-primary {
+        width: 230px !important;
+    }
+
+    /* Destacados */
+
+
+.destacados__texto h3 {
+    font-size: 25px !important;
+    font-weight: 700;
+}
+
+.destacados__texto p {
+    font-size: 15px !important;
+
+}
+
+.line {
+    width: 150px !important;
+    height: 4px !important;
+    background-color: white;
+}
+
+
+}
 
 h2 {
     font-size: 50px;
@@ -58,10 +161,10 @@ h3 {
 }
 
 .qtyTickets {
-color: white;
-background-color: rgba(156, 149, 196, 0.466);
-border-radius: 10px;
-padding: 10px;
+    color: white;
+    background-color: rgba(156, 149, 196, 0.466);
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .btn-primary {
@@ -146,7 +249,7 @@ padding: 10px;
     border-radius: 10px;
 }
 
-/* Modal */
+/* Modal Tickets */
 
 .ticketSelection {
     color: antiquewhite;
@@ -192,7 +295,7 @@ padding: 10px;
     height: 70px;
     border-radius: 0;
     border: 0;
-    padding: 20px;  
+    padding: 20px;
 }
 
 
@@ -203,8 +306,8 @@ padding: 10px;
 }
 
 .modal-container {
-background: rgba(217, 217, 217, 0.5);
-border-radius: 15px;
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 15px;
 }
 
 .imgShop {
@@ -213,5 +316,3 @@ border-radius: 15px;
     margin: 10px;
     margin-left: 20px;
 }
-
-

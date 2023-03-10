@@ -20,12 +20,12 @@
 
     <header>
         <nav class="navbar " data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand ms-5">ShowBiz</a>
-                <div class="d-flex align-items-end">
-                    <button id="cart" class="btn btn-secondary cart bi bi-cart4 " data-bs-toggle="modal"
+            <div class="container">
+                <a href="./index.html" class="navbar-brand">ShowBiz</a>
+                <div class=" cart-container d-flex align-items-end">
+                    <button id="cart" class="shop-icon cart bi bi-cart4 " data-bs-toggle="modal"
                         data-bs-target="#exampleModal"></button>
-                    <h4 id="qtyTickets" class="qtyTickets ms-3 me-5"></h4>
+                    <h4 id="qtyTickets" class="qtyTickets-icon d-flex align-items-center "></h4>
                 </div>
             </div>
         </nav>
@@ -69,31 +69,31 @@
 
             <div class="portada__texto container">
                 <h2 class="mt-4">Disfrutá de tus artistas favoritos</h2>
-                <p class="mb-5">Comprá tu entrada a una nueva experiencia.</p>
+                <p class="mb-3">Comprá tu entrada a una nueva experiencia.</p>
             </div>
 
             <div>
-                <button type="button" class="btn btn-primary mt-2">VER MAS SHOWS</button>
+                <a href="#shows" type="button" class="btn btn-primary mt-2 mb-4">VER MAS SHOWS</a>
             </div>
         </section>
 
 
-        <section class="destacados  pt-2 ">
-            <div class="destacados__texto container mt-5">
+        <section class="destacados">
+            <div class="destacados__texto container ">
                 <h3>Destacados</h3>
                 <p>Estos son los eventos destacados para vos.</p>
-                <div class="line"></div>
+                <div class="line mt-2 "></div>
             </div>
 
             <div class="destacados__img container">
-                <img class="destacados__band container pt-5" src="./img/lafemmeFlyer.jpg" alt="">
+                <img class="destacados__band container pt-4" src="./img/lafemmeFlyer.jpg" alt="">
                 <img class="destacados__band container pt-5" src="./img/massiveattack.jpg" alt="">
             </div>
         </section>
 
-        <section class="shows pt-2 ">
-            <div class="shows__texto container mt-5">
-                <h3>Shows</h3>
+        <section id="shows" class="shows pt-2 ">
+            <div class="shows__texto container mt-2">
+                <h3 >Shows</h3>
                 <p>Los mejores shows los encontras acá.</p>
                 <div class="line mb-5"></div>
             </div>
