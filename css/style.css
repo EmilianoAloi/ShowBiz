@@ -14,12 +14,15 @@ header {
     z-index: 10;
     width: 100vw;
     border: 10px;
-    border-bottom: #292c36;
+    border-bottom: #1c1f25;
 }
 
 nav {
-    background-color: #1F2023;
-}
+    background-color: #1f2023;
+    border-bottom-left-radius: 50px;
+
+    border-bottom-left-radius: inherit;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;}
 
 .navbar-brand {
     font-weight: 800;
@@ -54,9 +57,7 @@ nav {
     padding-bottom: 3px;
     margin-bottom: 1px;
     background-color: red;
-    background-size: contain;
-    size-adjust: 10px;
-
+z-index: 20;
 }
 
 
@@ -72,7 +73,7 @@ nav {
 
 
 .portada {
-    background-color: #1F2023;
+    background-color: #26282c;
     display: flex;
     flex-direction: column;
     flex-direction: column;
@@ -111,7 +112,7 @@ nav {
     }
 
     .portada__texto h2 {
-        font-size: 25px !important;
+        font-size: 30px !important;
 
     }
 
@@ -121,7 +122,8 @@ nav {
     }
 
     .btn-primary {
-        width: 230px !important;
+        font-size: 15px !important;
+        width: 150px !important;
     }
 
     /* Destacados */
@@ -175,8 +177,9 @@ h3 {
 /* Destacados */
 
 .destacados {
-    background-color: #1F2023;
+    background-color: #26282c;
     color: white;
+    border: 0;
 }
 
 .destacados__texto h3 {
@@ -204,7 +207,7 @@ h3 {
 /* SHOWS */
 
 .shows {
-    background-color: #1F2023;
+    background-color: #26282c;
     color: white;
 }
 
@@ -224,7 +227,7 @@ h3 {
 
 .card {
     width: 17rem;
-    background-color: transparent;
+    background-color: #1F2023;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -235,6 +238,7 @@ h3 {
 }
 
 .card-text {
+    color: white;
     font-style: italic;
     font-weight: 100;
     font-size: 15px !important;
@@ -242,6 +246,8 @@ h3 {
 
 .btn-dark {
     width: 100%;
+    background-color:#26282c;
+    border: 0;
 }
 
 .card-img-top {
