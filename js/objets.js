@@ -1,18 +1,17 @@
 const shows = [
     {
         id: 'show-1',
-        band: 'La Femme',
-        img: './img/lafemmeMini.jpg',
+        band: 'Nine Inch Nails',
+        img: './img/ninMini.jpg',
         date: '23/05/2023',
+        city: 'Buenos Aires ',
+        adress: 'Cabildo 1520',
         eventTime: '21 hs',
         sector: '',
         quantity: '',
-        city: 'Buenos Aires ',
-        location: 'Complejo Art Media',
-        adress: 'Cabildo 1520',
+        location: 'Luna Park',
         price: '',
         subtotal: '',
-
     },
     {
         id: 'show-2',
@@ -56,19 +55,22 @@ const shows = [
         price: '',
         subtotal: '',
     },
+
+
     {
         id: 'show-5',
-        band: 'Nine Inch Nails',
-        img: './img/ninMini.jpg',
+        band: 'La Femme',
+        img: './img/lafemmeMini.jpg',
         date: '23/05/2023',
-        city: 'Buenos Aires ',
-        adress: 'Cabildo 1520',
         eventTime: '21 hs',
         sector: '',
         quantity: '',
-        location: 'Luna Park',
+        city: 'Buenos Aires ',
+        location: 'Complejo Art Media',
+        adress: 'Cabildo 1520',
         price: '',
         subtotal: '',
+
     },
     {
         id: 'show-6',
