@@ -46,12 +46,13 @@ buyButtons.forEach(btn => {
         showSelected.forEach((show) => {
             modalShow.innerHTML = `
                 <div class="container">
-                    <h3>${show.band}</h3>
-                    <div class='d-flex align-items-center justify-content-around'>
+                    <h3 class='ticket__band'>${show.band}</h3>
+                    <div class=' containerTicket d-flex align-items-center justify-content-around'>
                     <img src='${show.img}' class='imgModal mt-4'> 
-                        <div>
+                        <div class='ticket__info'>
+                        <h2 class='align-self-start '> Información general </h2>
                             <h4>Ciudad: ${show.city}</h4>
-                            <h4>Ciudad: ${show.adress}</h4>
+                            <h4>Direccion: ${show.adress}</h4>
                             <h4>Fecha: ${show.date}</h4>
                             <h4>Hora: ${show.eventTime}</h4>
                             <h4>Direccion: ${show.adress}</h4>

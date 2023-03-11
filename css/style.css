@@ -8,17 +8,19 @@
 header {
     position: fixed;
     z-index: 10;
-    width: 100vw;
+    width: 100%;
     border: 10px;
     border-bottom: #1c1f25;
 }
 
 nav {
     background-color: #1f2023;
-    border-bottom-left-radius: 2em 0.7em !important;
-    border-bottom-right-radius: 2em 0.7em !important;
+    border-bottom-left-radius: 2em 0.7em;
+    border-bottom-right-radius: 2em 0.7em;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+
+
 
 .navbar-brand {
     font-weight: 800;
@@ -30,11 +32,12 @@ nav {
 
 .shop-icon {
     background-color: #292c36;
-    font-size: 25px !important;
+    color: white;
+    font-size: 20px;
     border: 0px;
     border-radius: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
     padding-top: 5px;
     padding-bottom: 5px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
@@ -44,9 +47,8 @@ nav {
     background-color: #35373d;
 }
 
-
 .qtyTickets-icon {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 700;
     border-radius: 100px;
     padding-right: 5px;
@@ -59,135 +61,6 @@ nav {
 }
 
 
-
-
-
-.portada {
-    background-color: #26282c;
-    display: flex;
-    flex-direction: column;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 25px !important;
-}
-
-.portada__texto {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-}
-
-
-
-.portada__texto p {
-    font-size: 30px;
-}
-
-.portada__texto h2 {
-    font-size: 80px !important;
-    font-weight: 700;
-}
-
-.portada__carousel {
-    width: 100%;
-}
-
-
-@media (max-width: 600px) {
-
-    .navbar-brand {
-        font-size: 20px;
-    }
-
-    .shop-icon {
-        padding: 8px!important;
-
-    }
-
-    .portada {
-        margin-top: 10px;
-    }
-
-
-    .portada__texto {
-        color: white;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px !important;
-    }
-
-    .portada__texto h2 {
-        font-size: 35px !important;
-
-    }
-
-    .portada__texto p {
-        font-size: 15px !important;
-
-    }
-
-    .btn-primary {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 15px !important;
-        width: 170px !important;
-        height: 52px;
-    }
-
-    /* Destacados */
-
-
-    .destacados__texto h2 {
-        font-size: 25px !important;
-        font-weight: 700;
-    }
-
-    .destacados__texto p {
-        font-size: 17px !important;
-
-    }
-
-    .line {
-        width: 150px !important;
-        height: 4px !important;
-        background-color: white;
-    }
-
-    /* Shows */
-
-    .shows__texto h2 {
-        font-size: 25px !important;
-        font-weight: 700;
-    }
-
-    .shows__texto p {
-        font-size: 18px !important;
-    }
-
-
-}
-
-.btn-primary {
-    font-size: 25px;
-    font-weight: 600;
-    width: 20rem;
-    background-color: #59359a !important;
-    border: 0;
-
-}
-
-
-.cart {
-    color: white;
-    font-size: 30px;
-}
-
 .qtyTickets {
     color: white;
     background-color: rgba(156, 149, 196, 0.466);
@@ -196,31 +69,79 @@ nav {
 }
 
 
-.btn-primary:hover {
-    background-color: #432874 !important;
+
+/*  Mobile First */
+
+.navbar-brand {
+    font-size: 20px;
+
+
 }
 
-/* Destacados */
+.portada {
+    background-color: #26282c;
+}
+
+
+.portada__texto h2 {
+    color: white;
+    font-weight: 600;
+}
+
+.portada__carousel {
+    width: 100%;
+
+}
+
+.portada__texto h2 {
+    font-size: 35px;
+
+}
+
+.portada__subtitle {
+    background-color: #1f2023;
+    font-size: 13px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+
+}
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #59359a;
+    border: 0px;
+    font-size: 20px;
+    width: 200px;
+    height: 52px;
+    letter-spacing: 1.5px;
+    transition: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+}
 
 .destacados {
     background-color: #26282c;
     color: white;
-    border: 0;
 }
 
-.destacados__texto h3 {
-    font-size: 35px;
+.destacados__texto h2 {
+    font-size: 25px;
     font-weight: 700;
-    padding-top: 50px;
+    margin: 0px;
 }
 
 .destacados__texto p {
-    font-size: 30px;
+    margin: 0px;
 }
 
+
 .line {
-    width: 350px;
-    height: 5px;
+    width: 150px;
+    height: 4px;
     background-color: white;
 }
 
@@ -231,20 +152,26 @@ nav {
 }
 
 
-/* SHOWS */
+
+/* Shows */
 
 .shows {
     background-color: #26282c;
     color: white;
 }
 
-.shows__texto h3 {
-    font-size: 35px;
+.shows__texto h2 {
+    font-size: 25px;
     font-weight: 700;
+    margin: 0px;
+
 }
 
 .shows__texto p {
-    font-size: 30px;
+    font-size: 18px;
+    margin: 0px;
+
+
 }
 
 .cuadricula {
@@ -254,7 +181,7 @@ nav {
 
 .card {
     width: 17rem;
-    background-color: #27272c;
+    background-color: #161719;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -273,7 +200,7 @@ nav {
 
 .btn-dark {
     width: 100%;
-    background-color: #26282c;
+    background-color: #59359a;
 }
 
 .card-img-top {
@@ -281,18 +208,48 @@ nav {
     border-radius: 10px;
 }
 
-/* Modal Tickets */
+
+
+/* MODAL TICKET */
+
 
 .ticketSelection {
     color: antiquewhite;
     background-image: url(../img/fondo.png);
     background-size: cover;
+
+}
+
+.containerTicket {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .imgModal {
-    width: 30%;
+    width: 60%;
     border-radius: 10px;
 }
+
+.ticket__band {
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 20px;
+
+}
+
+.ticket__info h2 {
+    font-weight: 600;
+
+}
+
+.ticket__info h4 {
+
+    font-size: 15px;
+    margin: 0;
+
+}
+
 
 
 .typeTickets {
@@ -326,6 +283,111 @@ nav {
     border-radius: 0;
     border: 0;
     padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP */
+
+@media (min-width: 600px) {
+
+    .portada {
+        background-color: #26282c;
+        padding-top: 30px;
+    }
+
+    .portada__subtitle {
+        font-size: 40px;
+        padding: 20px !important;
+
+    }
+
+    .portada__texto h2 {
+        font-size: 80px !important;
+        font-weight: 700;
+    }
+
+
+    .portada__carousel {
+        width: 100%;
+    }
+
+
+    /*
+.btn-primary {
+    font-size: 25px;
+    font-weight: 600;
+    width: 20rem;
+    background-color: #59359a !important;
+    border: 0;
+
+}
+*/
+
+
+    /* DESTACADO */
+
+    .destacados__texto h2 {
+        font-size: 35px;
+        font-weight: 700;
+        padding-top: 50px;
+    }
+
+    .portada__subtitle {
+        background-color: #1f2023;
+        color: white;
+        padding: 10px;
+        width: fit-content;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+
+
+    .line {
+        width: 350px;
+        height: 5px;
+        background-color: white;
+    }
+
+    /* SHOWS */
+
+    .shows__texto h2 {
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    .shows__texto p {
+        font-size: 30px;
+    }
+
+
+    /* MODAL TICKET */
+
+    .imgModal {
+        width: 30%;
+        border-radius: 10px;
+    }
+
+    .containerTicket {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+
 }
 
 

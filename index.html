@@ -19,8 +19,8 @@
 <body>
 
     <header>
-        <nav class="navbar pb-3 " data-bs-theme="dark">
-            <div class="container">
+        <nav class="navbar pb-3" data-bs-theme="dark">
+            <div class="container pe-3">
                 <a href="./index.html" class="navbar-brand">ShowBiz</a>
                 <div class=" cart-container d-flex align-items-end">
                     <button id="cart" class="shop-icon cart bi bi-cart4 " data-bs-toggle="modal"
@@ -31,60 +31,47 @@
         </nav>
     </header>
 
-    <main class="main pt-5">
+    <main class="pt-5 ">
 
-        <section class="portada gap-1">
-            <div id="carouselExampleControls" class="portada__carousel carousel  slide" data-bs-ride="carousel">
+        <section class="portada d-flex flex-column justify-content-center align-items-center pt-4   gap-1">
+
+            <div class="portada__texto container   d-flex flex-column text-center pt-1 pb-2">
+                <h2 class="">Disfrutá de tus artistas favoritos</h2>
+            </div>
+
+            <div id="carouselExampleControls" class="portada__carousel carousel order-md-first  slide "
+                data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active ">
-
                         <picture class=" ">
-
                             <source srcset="./img/imaginedragons.png" media="(min-width: 450px)" class="">
-
                             <source class="" srcset="./img/imaginedragonsMobile.png" media="(min-width: 200px)">
-
                             <img class="img-fluid" src="./img/imaginedragons.png" alt="imagen principal">
                         </picture>
 
-
                     </div>
 
                     <div class="carousel-item">
-
-                        <picture class=" ">
-
+                        <picture>
                             <source srcset="./img/lafemmeFlyer.jpg " media="(min-width: 450px)" class="">
-
                             <source class="" srcset="./img/lafemmeMobile.png" media="(min-width: 200px)">
-
                             <img class="img-fluid" src="./img/lafemmeFlyer.jpg" alt="imagen principal">
                         </picture>
-
                     </div>
                     <div class="carousel-item">
-
-                        <picture class=" ">
-
+                        <picture>
                             <source srcset="./img/hernancatanneo.jpg" media="(min-width: 450px)" class="">
-
                             <source class="" srcset="./img/hernancatanneoMobile.jpg" media="(min-width: 200px)">
-
                             <img class="img-fluid" src="./img/hernancatanneo.jpg" alt="imagen principal">
                         </picture>
                     </div>
                     <div class="carousel-item">
-
-                        <picture class=" ">
-
+                        <picture>
                             <source srcset="./img/massiveattack.jpg" media="(min-width: 450px)" class="">
-
                             <source class="" srcset="./img/massiveattackMobile.jpg" media="(min-width: 200px)">
-
                             <img class="img-fluid" src="./img/massiveattack.jpg" alt="imagen principal">
                         </picture>
                     </div>
-
 
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev">
@@ -99,36 +86,36 @@
                 </div>
             </div>
 
-            <div class="portada__texto container pt-5">
-                <h2 class="">Disfrutá de tus artistas favoritos</h2>
-                <p class="mb-3">Comprá tu entrada a una nueva experiencia.</p>
-            </div>
 
-            <div>
-                <a href="#shows" type="button" class="btn btn-primary text-nowrap mt-2 ">VER MAS SHOWS</a>
+
+
+
+            <div class="d-flex flex-column justify-content-center align-items-center pt-4">
+                <h6 class="portada__subtitle container text-center  mb-4">Comprá tu entrada a una nueva experiencia.</h6>
+                <a href="#shows" type="button" class="btn btn-primary  text-nowrap  mt-2 mb-5 ">VER MAS SHOWS</a>
             </div>
         </section>
 
 
-        <section class="destacados">
+        <section class="destacados pb-4">
             <div class="destacados__texto container ">
-                <h3>Destacados</h3>
+                <h2>Destacados</h2>
                 <p>Estos son los eventos destacados para vos.</p>
                 <div class="line mt-2"></div>
             </div>
 
             <div class="destacados__img container ">
                 <img class="destacados__band  mt-4" src="./img/lafemmeFlyer.jpg" alt="">
-                <img   class="destacados__band  mt-3" src="./img/massiveattack.jpg" alt="">
+                <img class="destacados__band  mt-3" src="./img/massiveattack.jpg" alt="">
             </div>
         </section>
-     
+
 
         <section id="shows" class="shows pt-2 ">
             <div class="shows__texto container mt-2">
                 <h2>Shows</h2>
                 <p>Los mejores shows los encontras acá.</p>
-                <div class="line mb-5"></div>
+                <div class="line mt-2 mb-4"></div>
             </div>
 
             <div class="container">
