@@ -5,6 +5,12 @@
 }
 
 
+
+
+
+/*  Mobile First */
+
+
 header {
     position: fixed;
     z-index: 10;
@@ -68,10 +74,6 @@ nav {
     padding: 10px;
 }
 
-
-
-/*  Mobile First */
-
 .navbar-brand {
     font-size: 20px;
 
@@ -83,9 +85,13 @@ nav {
 }
 
 
-.portada__texto h2 {
+.portada__texto h6 {
+    font-size: 35px;
     color: white;
     font-weight: 600;
+
+
+
 }
 
 .portada__carousel {
@@ -93,27 +99,53 @@ nav {
 
 }
 
-.portada__texto h2 {
-    font-size: 35px;
+
+.portada__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.portada__box {
+    position: relative;
+    z-index: 5;
 
 }
 
 .portada__subtitle {
-    background-color: #1f2023;
-    font-size: 13px;
+
+
+    font-size: 14px;
     color: white;
     padding: 10px;
     border-radius: 5px;
     font-weight: 600;
     letter-spacing: 0.8px;
-
+    background-color: #1c1f25;
+    position: relative;
 }
+
+.portada__subtitle::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: '';
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    width: 100%;
+    height: 100%;
+    filter:blur(5px);
+    z-index: -1;
+}
+
+
 
 .btn-primary {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #59359a;
+    background-color: #5f13ee;
+
     border: 0px;
     font-size: 20px;
     width: 200px;
@@ -121,17 +153,32 @@ nav {
     letter-spacing: 1.5px;
     transition: 0.2s;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+
 }
+
+.btn-primary:hover {
+    background-color: #52328e;
+
+}
+
+
+
+
+
 
 .destacados {
     background-color: #26282c;
     color: white;
+
+
 }
 
 .destacados__texto h2 {
-    font-size: 25px;
+    font-size: 25px ;
     font-weight: 700;
     margin: 0px;
+
+
 }
 
 .destacados__texto p {
@@ -143,12 +190,16 @@ nav {
     width: 150px;
     height: 4px;
     background-color: white;
+
+
+
 }
 
 .destacados__img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 
@@ -158,6 +209,7 @@ nav {
 .shows {
     background-color: #26282c;
     color: white;
+
 }
 
 .shows__texto h2 {
@@ -183,7 +235,7 @@ nav {
     width: 17rem;
     background-color: #1c1f25;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
 }
 
 
@@ -207,6 +259,7 @@ nav {
 .card-img-top {
     width: 100%;
     border-radius: 10px;
+
 }
 
 
@@ -214,17 +267,36 @@ nav {
 /* MODAL TICKET */
 
 
+
+.modal-content {
+    border-radius: 30px;
+    background: rgb(82,50,142);
+    margin-top: 100px;
+    border: 0;
+
+}
+
+.modal-body {
+    background: radial-gradient(circle,  rgba(82,50,142,1) 0%, rgba(128,50,142,0.5024860285911239) 100%);    height: 720px;
+    border-radius: 30px;
+    border: 0;
+
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;    
+    /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important; */
+
+}
+
 .ticketSelection {
-    color: antiquewhite;
-    background-image: url(../img/fondo.png);
-    background-size: cover;
+    color: white;
+    background: linear-gradient(to right, #000000, #434343);
+        background-size: cover;
 
 }
 
 .containerTicket {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 10px;
 }
 
 .imgModal {
@@ -235,7 +307,7 @@ nav {
 .ticket__band {
     font-size: 30px;
     font-weight: 600;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 
 }
 
@@ -258,19 +330,34 @@ nav {
     height: 70px;
     border-radius: 10px;
     border: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 
+.btnTicket {
+    border-radius: 0px ;
+    border: 0;
+    height: 100px !important;
+}
 
 .buyTicket {
-    background-color: #1F2023;
     color: white;
+    background-color: #5f13ee;
+height: 50px;
+   
+    
+}
+
+.buyTicket:hover {
+    background-color: #52328e;
+
 }
 
 .sector-select {
     background-color: #1F2023;
     color: white;
-    width: 220px;
+    width: 100%;
     height: 70px;
     border-radius: 0;
     border: 0;
@@ -308,35 +395,35 @@ nav {
 
     .navbar-brand {
         font-size: 40px;
-    
+
     }
-    
-    
-.shop-icon {
-    font-size: 35px;
-}
 
 
-.qtyTickets-icon {
-    font-size: 18px;
-    font-weight: 700;
-    border-radius: 100px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    margin-bottom: 1px;
-    background-color: red;
-    z-index: 20;
-}
+    .shop-icon {
+        font-size: 35px;
+    }
 
 
-.qtyTickets {
-    color: white;
-    background-color: rgba(156, 149, 196, 0.466);
-    border-radius: 10px;
-    padding: 10px;
-}
+    .qtyTickets-icon {
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 100px;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-bottom: 1px;
+        background-color: red;
+        z-index: 20;
+    }
+
+
+    .qtyTickets {
+        color: white;
+        background-color: rgba(156, 149, 196, 0.466);
+        border-radius: 10px;
+        padding: 10px;
+    }
 
 
 
@@ -345,7 +432,7 @@ nav {
         padding-top: 70px !important;
     }
 
-    .portada__texto h2 {
+    .portada__texto h6 {
         font-size: 80px;
         font-weight: 700;
         padding-top: 50px;
@@ -362,23 +449,23 @@ nav {
 
     }
 
-    
 
-    
-.btn-primary {
-    font-size: 25px;
-    font-weight: 600;
-    width: 30rem;
-    padding: 50px;
 
-}
+
+    .btn-primary {
+        font-size: 25px;
+        font-weight: 600;
+        width: 30rem;
+        padding: 50px;
+
+    }
 
 
 
     /* DESTACADO */
 
     .destacados__texto h2 {
-        font-size: 55px;
+        font-size: 55px ;
         padding-top: 50px;
     }
 
@@ -392,9 +479,9 @@ nav {
         width: 350px;
         height: 5px;
         background-color: white;
+
     }
 
-    /* SHOWS */
 
     .shows__texto h2 {
         font-size: 55px;

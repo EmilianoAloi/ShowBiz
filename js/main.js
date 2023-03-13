@@ -62,15 +62,15 @@ buyButtons.forEach(btn => {
                 </div>
                 
                 <form>
-                <div class="typeTickets d-flex  container justify-content-betwen mt-5 mb-5">
-                    <button type="button" class="btn btn-dark">UBICACION</button>
+                <div class="typeTickets d-flex  container justify-content-betwen mt-4 mb-5">
+                    <button type="button" class="btn btn-dark btnTicket">UBICACION</button>
                     <div class="custom-select">
                         <select id="sector-select"  class="sector-select" name="" >
                             <option value="Campo General">Campo General: $5.000</option>
                             <option value="Campo VIP">Campo VIP: $10.000</option>
                         </select>
                     </div>
-                    <button type="button" class="btn btn-dark">CANTIDAD</button>
+                    <button type="button" class="btn btn-dark btnTicket">CANTIDAD</button>
                     <div class="custom-select">
                         <select id='qty-select' class="sector-select" name="qty" >
                             <option value="1">1 entrada</option>
@@ -79,7 +79,7 @@ buyButtons.forEach(btn => {
                             <option value="4">4 entradas</option>
                         </select>
                     </div>
-                    <button type="button" id = 'buyTicket' class="buyTicket btn btn-dark" data-bs-dismiss="modal" >COMPRAR TICKETS</button>
+                    <button type="button" id = 'buyTicket' class="buyTicket btn btn-dark btnTicket" data-bs-dismiss="modal" >COMPRAR TICKETS</button>
                 </div>
                 </form>
             `
@@ -114,7 +114,7 @@ buyButtons.forEach(btn => {
 
                 const Toast = Swal.mixin({
                     toast: true,
-                    position: 'top-end',
+                    position: 'bottom-end',
                     showConfirmButton: false,
                     timer: 3000,
                     timerProgressBar: true,
