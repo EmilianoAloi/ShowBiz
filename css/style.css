@@ -275,6 +275,7 @@ header {
 
 
 
+
 .modal-content {
     border-radius: 30px;
     margin-top: 100px;
@@ -285,17 +286,23 @@ header {
 .modal-body {
     height: 520px;
     border-radius: 30px;
-    border: 0;
+    border: 2px solid;
+    border-color: #789cefe0;
 
 
 
 }
+
+
+
 
 .ticketSelection {
     color: white;
     /* background: linear-gradient(to right, #000000, #434343); */
     background-image: url('../img/fondoModal.jpg');
     background-size: contain;
+
+
 
 }
 
@@ -311,6 +318,8 @@ header {
 .imgModal {
     width: 40%;
     border-radius: 10px;
+
+
 
 }
 
@@ -357,21 +366,25 @@ header {
     margin-top: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
+
 }
 
 .buyTicket:hover {
     background-color: #52328e;
 
+
+
 }
 
 .sector-select {
-    background-color: #1F2023;
+    background-color: #1a1d20;
     color: white;
     width: 100%;
     height: 50px;
     border: 0;
     padding: 10px;
     border-radius: 0;
+
 }
 
 .qty-select {
@@ -385,8 +398,23 @@ header {
 
 
 
+/* SHOP */
 
+.shop {
+    background-color: #1F2023;
+}
 
+.modal-container {
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 15px;
+}
+
+.imgShop {
+    width: 125px;
+    border-radius: 15px;
+    margin: 10px;
+    margin-left: 20px;
+}
 
 
 
@@ -509,36 +537,82 @@ header {
     .imgModal {
         width: 30%;
         border-radius: 10px;
+        margin-left: 40px;
     }
 
     .containerTicket {
         display: flex;
         flex-direction: row;
-        gap: 40px;
+        justify-content:space-between;
     }
+
+    .ticket__info {
+        padding-right: 50px;
+    }
+
+    .ticket__info h2 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .ticket__info h4 {
+        font-size: 20px;
+    }
+
+    .typeTickets {
+        flex-direction: row !important;
+    }
+
 
     .ticketSelection {
         color: white;
-   
-      
+
     }
+
+    .btn-dark {
+        width: 10% !;
+    }
+
+    .btnTicket {
+        height: 50px;
+        width: 20% !important;
+        margin-top: 0PX !important;
+
+    }
+
+    .buyTicket {
+        color: white;
+        background-color: #5f13ee;
+        padding: 0;
+    }
+
+
+    .sector-select {
+       
+        width: 200px !important;
+        height: 50px !important;
+        border: 0;
+        padding: 10px;
+        border-radius: 0;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+    }
+
+    .qty-select {
+        background-color: #1F2023;
+        color: white;
+        height: 70px;
+        border-radius: 0;
+        border: 0;
+        padding: 20px;
+        
+    }
+
+
+
 }
 
 
-/* SHOP */
 
-.shop {
-    background-color: #1F2023;
-}
 
-.modal-container {
-    background: rgba(217, 217, 217, 0.5);
-    border-radius: 15px;
-}
 
-.imgShop {
-    width: 125px;
-    border-radius: 15px;
-    margin: 10px;
-    margin-left: 20px;
-}

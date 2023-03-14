@@ -79,7 +79,7 @@ buyButtons.forEach(btn => {
                             <option value="4">4 entradas</option>
                         </select>
                     </div>
-                    <button type="button" id = 'buyTicket' class="buyTicket btn btn-dark btnTicket align-self-center" data-bs-dismiss="modal" >COMPRAR TICKETS</button>
+                    <button type="button" id = 'buyTicket' class="buyTicket btn btn-dark btnTicket align-self-center" data-bs-dismiss="modal" >AGREGAR A CARRITO</button>
                 </div>
                 </form>
             `
