@@ -51,12 +51,12 @@ buyButtons.forEach(btn => {
                     <img src='${show.img}' class='imgModal mt-4'> 
                         <div class='ticket__info'>
                         <h2 class='align-self-start '> Información general </h2>
-                            <h4>Ciudad: ${show.city}</h4>
-                            <h4>Direccion: ${show.adress}</h4>
-                            <h4>Fecha: ${show.date}</h4>
-                            <h4>Hora: ${show.eventTime}</h4>
-                            <h4>Direccion: ${show.adress}</h4>
-                            <h4>Estadio: ${show.location}</h4>
+                            <h4 class='ticket__info-texr'>Ciudad: ${show.city}</h4>
+                            <h4 class='ticket__info-texr'>Direccion: ${show.adress}</h4>
+                            <h4 class='ticket__info-texr'>Fecha: ${show.date}</h4>
+                            <h4 class='ticket__info-texr'>Hora: ${show.eventTime}</h4>
+                            <h4 class='ticket__info-texr'>Direccion: ${show.adress}</h4>
+                            <h4 class='ticket__info-texr'>Estadio: ${show.location}</h4>
                         </div>
                     </div>
                 </div>

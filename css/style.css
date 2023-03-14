@@ -16,15 +16,15 @@ header {
     z-index: 10;
     width: 100%;
     border: 20px;
-    border-bottom: #1c1f25;
+    border-bottom: #d5d7dc;
     
 }
 
 .navbar {
-    background-color: #1f2023;
+    background-color: #1c2028;
     border-bottom-left-radius: 2em 0.7em;
     border-bottom-right-radius: 2em 0.7em;
-   box-shadow: rgba(255, 255, 255, 0.655) 0px 0px 5px;;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 
@@ -47,7 +47,7 @@ header {
     padding-right: 12px;
     padding-top: 5px;
     padding-bottom: 5px;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .shop-icon:hover {
@@ -234,12 +234,9 @@ header {
 
 .card {
     width: 17rem;
-    background-color: #1c1f25;
+    background-color: #1c2028;
     border-radius: 20px;
     border: 100;
-    border-color: rgba(245, 222, 179, 0.177);
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
-
 }
 
 
@@ -257,7 +254,6 @@ header {
 .btn-dark {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
-    border-color: rgba(205, 183, 183, 0.342);
 }
 
 .card-img-top {
@@ -281,11 +277,10 @@ header {
 }
 
 .modal-body {
-    height: 530px;
+    height: 500px;
     border-radius: 30px;
     border: 0;
 
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important; */
 
 }
@@ -297,14 +292,19 @@ header {
 
 }
 
+.ticket__info-texr {
+    padding-bottom: 2px;
+}
+
 .containerTicket {
 
-    gap: 10px;
+    gap: 5px;
 }
 
 .imgModal {
-    width: 50%;
+    width: 40%;
     border-radius: 10px;
+    
 }
 
 .ticket__band {
@@ -313,10 +313,7 @@ header {
     padding-bottom: 0px;
 
 }
-.ticket__info {
 
-    
-}
 
 .ticket__info h2 {
     font-weight: 600;
