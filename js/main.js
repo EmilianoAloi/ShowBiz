@@ -45,7 +45,7 @@ buyButtons.forEach(btn => {
         const modalShow = document.querySelector('.modal-body')
         showSelected.forEach((show) => {
             modalShow.innerHTML = `
-                <div class="container">
+                <div class="container ">
                     <h3 class='ticket__band'>${show.band}</h3>
                     <div class=' containerTicket d-flex align-items-center justify-content-around'>
                     <img src='${show.img}' class='imgModal mt-4'> 
@@ -62,7 +62,7 @@ buyButtons.forEach(btn => {
                 </div>
                 
                 <form>
-                <div class="typeTickets d-flex  container justify-content-betwen mt-4 mb-5">
+                <div class="typeTickets d-flex flex-column container justify-content-betwen  mt-4 mb-5">
                     <button type="button" class="btn btn-dark btnTicket">UBICACION</button>
                     <div class="custom-select">
                         <select id="sector-select"  class="sector-select" name="" >
@@ -79,7 +79,7 @@ buyButtons.forEach(btn => {
                             <option value="4">4 entradas</option>
                         </select>
                     </div>
-                    <button type="button" id = 'buyTicket' class="buyTicket btn btn-dark btnTicket" data-bs-dismiss="modal" >COMPRAR TICKETS</button>
+                    <button type="button" id = 'buyTicket' class="buyTicket btn btn-dark btnTicket align-self-center" data-bs-dismiss="modal" >COMPRAR TICKETS</button>
                 </div>
                 </form>
             `
