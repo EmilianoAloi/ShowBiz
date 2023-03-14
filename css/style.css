@@ -17,7 +17,7 @@ header {
     width: 100%;
     border: 20px;
     border-bottom: #d5d7dc;
-    
+
 }
 
 .navbar {
@@ -26,7 +26,7 @@ header {
 
     border-bottom-left-radius: 2em 0.7em;
     border-bottom-right-radius: 2em 0.7em;
-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
 }
 
@@ -44,7 +44,7 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
     background-color: #292c36;
     color: white;
     font-size: 20px;
-    border-color:#789cef56 ;
+    border-color: #789cef56;
     border-radius: 10px;
     padding-left: 12px;
     padding-right: 12px;
@@ -238,9 +238,9 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 .card {
     width: 17rem;
     background-color: #10101a6d;
-border-color: #00000032;
+    border-color: #00000032;
 
-border-radius: 20px;
+    border-radius: 20px;
     border: 100;
 
 }
@@ -286,15 +286,16 @@ border-radius: 20px;
     height: 520px;
     border-radius: 30px;
     border: 0;
-    
+
 
 
 }
 
 .ticketSelection {
     color: white;
-    background: linear-gradient(to right, #000000, #434343);
-    background-size: cover;
+    /* background: linear-gradient(to right, #000000, #434343); */
+    background-image: url(/img/fondoModal.jpg);
+    background-size: contain;
 
 }
 
@@ -310,7 +311,7 @@ border-radius: 20px;
 .imgModal {
     width: 40%;
     border-radius: 10px;
-    
+
 }
 
 .ticket__band {
@@ -355,7 +356,7 @@ border-radius: 20px;
     width: 180px;
     margin-top: 15px;
     padding-top: 20px;
-        padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .buyTicket:hover {
@@ -370,6 +371,7 @@ border-radius: 20px;
     height: 50px;
     border: 0;
     padding: 10px;
+    border-radius: 0;
 }
 
 .qty-select {
@@ -409,7 +411,7 @@ border-radius: 20px;
 
     .shop-icon {
         font-size: 35px;
-        
+
     }
 
 
@@ -515,7 +517,11 @@ border-radius: 20px;
         gap: 40px;
     }
 
-
+    .ticketSelection {
+        color: white;
+   
+      
+    }
 }
 
 

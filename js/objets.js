@@ -66,7 +66,7 @@ const shows = [
         sector: '',
         quantity: '',
         city: 'Buenos Aires ',
-        location: 'Complejo Art Media',
+        location: 'Luna Park',
         adress: 'Cabildo 1520',
         price: '',
         subtotal: '',
