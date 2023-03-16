@@ -7,7 +7,6 @@
 
 
 
-
 /*  Mobile First */
 
 
@@ -298,9 +297,7 @@ header {
 
 .ticketSelection {
     color: white;
-    /* background: linear-gradient(to right, #000000, #434343); */
     background-image: url('../img/fondoModal.jpg');
-    background-size: contain;
 
 
 
@@ -400,12 +397,15 @@ header {
 
 /* SHOP */
 
-.shop {
-    background-color: #1F2023;
+.shopBody {
+    background-image: url('../img/shopBack.jpg');
+
+}
+
+.showShop {
 }
 
 .modal-container {
-    background: rgba(217, 217, 217, 0.5);
     border-radius: 15px;
 }
 
@@ -543,7 +543,7 @@ header {
     .containerTicket {
         display: flex;
         flex-direction: row;
-        justify-content:space-between;
+        justify-content: space-between;
     }
 
     .ticket__info {
@@ -588,7 +588,7 @@ header {
 
 
     .sector-select {
-       
+
         width: 200px !important;
         height: 50px !important;
         border: 0;
@@ -605,14 +605,9 @@ header {
         border-radius: 0;
         border: 0;
         padding: 20px;
-        
+
     }
 
 
 
 }
-
-
-
-
-

@@ -52,11 +52,10 @@ buyButtons.forEach(btn => {
                         <div class='ticket__info'>
                         <h2 class='align-self-start '> Información general </h2>
                             <h4 class='ticket__info-texr'>Ciudad: ${show.city}</h4>
-                            <h4 class='ticket__info-texr'>Direccion: ${show.adress}</h4>
                             <h4 class='ticket__info-texr'>Fecha: ${show.date}</h4>
                             <h4 class='ticket__info-texr'>Hora: ${show.eventTime}</h4>
-                            <h4 class='ticket__info-texr'>Direccion: ${show.adress}</h4>
                             <h4 class='ticket__info-texr'>Estadio: ${show.location}</h4>
+                            <h4 class='ticket__info-texr'>Direccion: ${show.adress}</h4>
                         </div>
                     </div>
                 </div>
@@ -77,6 +76,8 @@ buyButtons.forEach(btn => {
                             <option value="2">2 entradas</option>
                             <option value="3">3 entradas</option>
                             <option value="4">4 entradas</option>
+                            <option value="5">5 entradas</option>
+
                         </select>
                     </div>
                     <button type="button" id = 'buyTicket' class="buyTicket btn btn-dark btnTicket align-self-center" data-bs-dismiss="modal" >AGREGAR A CARRITO</button>
@@ -103,6 +104,7 @@ buyButtons.forEach(btn => {
                 })
 
                 shop.push(show);
+                console.log(shop)
                 numberShop();
 
                 /* guardar carrito en localstorage */
