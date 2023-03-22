@@ -179,32 +179,27 @@ cart.addEventListener('click', () => {
         let div = document.createElement('div');
         div.classList.add('showShop');
         div.classList.add('container');
-        div.classList.add('d-flex');
-        div.classList.add('align-items-center');
         div.classList.add('gap-5');
         div.classList.add('pt-2');
         div.innerHTML = `
-        <img class="imgShop" src="${show.img}" alt="Agar Agar">
-    <div class="infoShop bandShop d-flex flex-column mt-2 mb-5">
-        <h4 class="pb-4 pt-1 pe-4">SHOW</h4>
-        <h5>${show.band}</h5>
-    </div>
-    <div class="infoShop d-flex flex-column mb-5 ">
-        <h4 class="pb-4 pt-1 pe-4">UBICACION</h4>
-        <h5>${show.sector}</h5>
-    </div>
-    <div class="infoShop d-flex flex-column mb-5 ">
-        <h4 class="pb-4 pt-1 pe-4">CANTIDAD</h4>
-        <h5>${show.quantity}</h5>
-    </div>
-    <div class="infoShop d-flex flex-column mb-5 ">
-        <h4 class="pb-4 pt-1 pe-4">PRECIO </h4>
-        <h5>$${show.price}</h5>
-    </div>
-    <div class="infoShop d-flex flex-column mb-5 ms-4">
-        <h4 class="pb-4 pt-1 pe-4">SUBTOTAL</h4>
-        <h5>$${show.subtotal}</h5>
-    </div>
+        <div class="lineShop"></div>
+        <div class = infoShop>
+
+            <img class="imgShop" src="${show.img}" alt="Agar Agar">
+            <div class="infoShop bandShop d-flex flex-column ">
+                <h5 class = showBand>${show.band}</h5>
+                <h5 class = infoTicket>${show.sector}</h5>
+                <h5 class = infoTicket>Cantidad: ${show.quantity}</h5>
+                <h5 class = infoTicket>$${show.price}</h5>
+                <h5 class = infoTicket>SUBTOTAL: $${show.subtotal}</h5>
+            </div>
+            <div class = delItem >X</div>
+
+
+
+  
+    
+</div>
         `;
         modalShop.append(div);
     });
