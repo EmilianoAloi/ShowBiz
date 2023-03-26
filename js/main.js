@@ -188,18 +188,14 @@ cart.addEventListener('click', () => {
             <img class="imgShop" src="${show.img}" alt="Agar Agar">
             <div class="infoShop bandShop d-flex flex-column ">
                 <h5 class = showBand>${show.band}</h5>
-                <h5 class = infoTicket>${show.sector}</h5>
+                <h5 class = infoTicket>Sector: ${show.sector}</h5>
                 <h5 class = infoTicket>Cantidad: ${show.quantity}</h5>
-                <h5 class = infoTicket>$${show.price}</h5>
-                <h5 class = infoTicket>SUBTOTAL: $${show.subtotal}</h5>
+                <h5 class = infoTicket>Precio: $${show.price}</h5>
+                <h5 class = infoTicket>Subtotal: $${show.subtotal}</h5>
             </div>
-            <div class = delItem >X</div>
+            <a class=" delItem bi bi-trash"></a>    
+        </div>
 
-
-
-  
-    
-</div>
         `;
         modalShop.append(div);
     });
