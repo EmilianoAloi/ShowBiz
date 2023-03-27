@@ -6,18 +6,21 @@ let numberTickets = ''
 
 
 
+
+
+
 /*Tarjetas de shows dinamicas  */
 
 const gridShows = document.querySelector('#gridShows');
 
 
-    shows.forEach(show => {
-        const article = document.createElement('article')
-        article.classList.add('col-12');
-        article.classList.add('col-sm-3');
-        article.classList.add('card');
-        article.classList.add('mb-4');
-        article.innerHTML = `
+shows.forEach(show => {
+    const article = document.createElement('article')
+    article.classList.add('col-12');
+    article.classList.add('col-sm-3');
+    article.classList.add('card');
+    article.classList.add('mb-4');
+    article.innerHTML = `
     <img src="${show.img}" class="card-img-top mt-3" alt="${show.band}">
     <div class="card-body d-flex flex-column align-items-center">
         <h5 class="card-title">${show.band}</h5>
@@ -25,8 +28,9 @@ const gridShows = document.querySelector('#gridShows');
         <button id = '${show.id}' class="btn btn-dark btn-show" data-bs-toggle="modal" data-bs-target="#staticBackdrop">COMPRAR TICKETS</button>
     </div>
         `
-        gridShows.append(article);
-    })
+    gridShows.append(article);
+})
+
 
 
 
@@ -46,7 +50,7 @@ buyButtons.forEach(btn => {
         showSelected.forEach((show) => {
             modalShow.innerHTML = `
                 <div class="container ">
-                    <h3 class='ticket__band'>${show.band}</h3>
+                        <h3 class='ticket__band'>${show.band}</h3>
                     <div class=' containerTicket d-flex align-items-center justify-content-around'>
                     <img src='${show.img}' class='imgModal mt-4'> 
                         <div class='ticket__info'>
@@ -131,9 +135,12 @@ buyButtons.forEach(btn => {
                 })
             }
 
+
+
             let ticketSelected = document.querySelector('.buyTicket');
             ticketSelected.addEventListener('click', () => {
                 ticketSelection();
+
 
 
 
@@ -145,7 +152,7 @@ buyButtons.forEach(btn => {
 /* Actualizar numero en Carrito */
 
 const qtyTickets = document.querySelector('#qtyTickets');
-document.getElementById('qtyTickets').innerText =  localStorage.getItem('Numero de Tickets')
+document.getElementById('qtyTickets').innerText = localStorage.getItem('Numero de Tickets')
 
 
 function numberShop() {
@@ -160,10 +167,18 @@ function numberShop() {
 /* Carrito */
 
 
+
 let modalShop = document.querySelector('.modal-container ');
 
 
+
+
+
+
 cart.addEventListener('click', () => {
+
+
+
     modalShop.innerHTML = '';
 
 
@@ -172,6 +187,7 @@ cart.addEventListener('click', () => {
         const shopLs = localStorage.getItem('Seleccion de Tickets');
         let shopObjet = JSON.parse(shopLs);
         shop = shopObjet;
+
     }
 
 
@@ -188,18 +204,32 @@ cart.addEventListener('click', () => {
             <img class="imgShop" src="${show.img}" alt="Agar Agar">
             <div class="infoShop bandShop d-flex flex-column ">
                 <h5 class = showBand>${show.band}</h5>
-                <h5 class = infoTicket>Sector: ${show.sector}</h5>
+                <h5 class = infoTicket>${show.sector}</h5>
                 <h5 class = infoTicket>Cantidad: ${show.quantity}</h5>
                 <h5 class = infoTicket>Precio: $${show.price}</h5>
                 <h5 class = infoTicket>Subtotal: $${show.subtotal}</h5>
             </div>
-            <a class=" delItem bi bi-trash"></a>    
+            <a class="delItem bi bi-trash" id='${show.id}'></a>    
         </div>
 
         `;
+      
         modalShop.append(div);
+
+        const modalShopContainer = document.getElementById('#modalShop-container');
+
+        if (modalShopContainer != '') {
+            emptyShop.innerHTML = '';
+        }
+      
+
+
     });
+
+
 });
+
+
 
 
 

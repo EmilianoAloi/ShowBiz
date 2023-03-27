@@ -324,6 +324,7 @@ header {
     font-size: 30px;
     font-weight: 600;
     padding-bottom: 0px;
+    width: 200px !important;
 
 }
 
@@ -372,6 +373,8 @@ header {
 
 
 }
+
+
 
 .sector-select {
     background-color: #1a1d20;
@@ -611,6 +614,10 @@ header {
         justify-content: space-between;
     }
 
+    .ticket__band {
+        width: 500px !important;
+    }
+
     .ticket__info {
         padding-right: 50px;
     }
@@ -718,7 +725,7 @@ header {
         padding-top: 3px;
         padding-bottom: 3px;
         margin-bottom: 1px;
-        margin-left: 200px;
+        margin-left: 890px;
         background-color: rgb(50, 42, 42);
 
     }
@@ -771,6 +778,11 @@ header {
         margin-bottom: 40px;
         margin-right: 100px;
     }
+    
+    .totalMount {
 
+    background-color: #198754;
+    height: 47px;
+    }
 
 }
