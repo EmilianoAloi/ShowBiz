@@ -360,10 +360,11 @@ header {
 .buyTicket {
     color: white;
     background-color: #5f13ee;
-    width: 180px;
+    width: 200px;
     margin-top: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 5px;
 
 }
 
@@ -446,6 +447,18 @@ header {
 
 }
 
+.btnPay {
+
+    background-color: #4d0ec4;
+    border: 0px;
+    transition: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+}
+
+.btnPay:hover {
+    background-color: #52328e;
+}
+
 .lineShop {
     width: 270px;
     height: 1px;
@@ -496,7 +509,7 @@ header {
 
 /* DESKTOP */
 
-@media (min-width: 600px) {
+@media (min-width: 850px) {
 
 
     .navbar-brand {
@@ -683,9 +696,89 @@ header {
 
     /* SHOP */
 
+
     .modalContentShop {
         width: 75vw;
     }
+
+    .modalShop-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .shopBody {
+        background-image: url('../img/shopBack.jpg');
+        background-position: center;
+        color: white;
+        height: max-content;
+        width: 75vw;
+
+    }
+
+    .modal-title {
+        margin: 10px;
+    }
+
+    .btnClose {
+
+        margin-bottom: 50px;
+    }
+
+
+    .lineShop {
+        width: 98%;
+        height: 1px;
+        background-color: white;
+        margin-top: 1px;
+        margin-bottom: 5px;
+        margin-left: 10px;
+
+
+    }
+
+    .infoShop {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-around;
+        width: 80vw;
+    }
+
+
+    .imgShop {
+        width: 90px;
+        height: 90px;
+        border-radius: 50px;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+
+    .showBand {
+        font-weight: 700;
+        font-size: 25px;
+        margin-top: 10px;
+        width: 150px;
+    }
+
+    .infoTicket {
+        font-size: 20px;
+        font-weight: 600;
+        font-style: italic;
+        margin: 0;
+    }
+
+    .delItem {
+        font-size: 20px;
+        margin-bottom: 40px;
+        margin-right: 150px;
+
+    }
+
+    /* 
+
 
     .modalShop-container {
         display: flex;
@@ -783,6 +876,6 @@ header {
 
     background-color: #198754;
     height: 47px;
-    }
+    } */
 
 }

@@ -113,7 +113,7 @@ buyButtons.forEach(btn => {
 
                 const Toast = Swal.mixin({
                     toast: true,
-                    position: 'top',
+                    position: 'bottom-end',
                     showConfirmButton: false,
                     timer: 3000,
                     timerProgressBar: true,
@@ -179,7 +179,7 @@ function showShop() {
                 <h5 class = infoTicket>Precio: $${show.price}</h5>
                 <h5 class = infoTicket>Subtotal: $${show.subtotal}</h5>
             </div>
-            <a  class="delItem bi bi-trash" id='${show.id}'></a>    
+            <a  class="delItem bi bi-trash pe-2" id='${show.id}'></a>    
         </div>
         `;
         modalShop.append(div);
@@ -223,7 +223,7 @@ function deleteItem(e) {
     refreshShop();
     const Toast = Swal.mixin({
         toast: true,
-        position: 'top',
+        position: 'bottom-end',
         showConfirmButton: false,
         timer: 3000,
         timerProgressBar: true,
@@ -236,7 +236,7 @@ function deleteItem(e) {
         icon: 'success',
         title: 'Tickets eliminados del Carrito'
     })
- 
+
 }
 
 
