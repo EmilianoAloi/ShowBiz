@@ -40,6 +40,7 @@ shows.forEach(show => {
 
 
 const buyButtons = document.querySelectorAll('.btn-show');
+
 buyButtons.forEach(btn => {
 
     btn.addEventListener('click', (e) => {
@@ -104,13 +105,15 @@ buyButtons.forEach(btn => {
                     show.subtotal = show.quantity * show.price
                 })
 
+
+
                 shop.push(show);
                 numberShop();
 
 
                 const Toast = Swal.mixin({
                     toast: true,
-                    position: 'bottom-end',
+                    position: 'top',
                     showConfirmButton: false,
                     timer: 3000,
                     timerProgressBar: true,
@@ -129,6 +132,9 @@ buyButtons.forEach(btn => {
 
             let ticketSelected = document.querySelector('.buyTicket');
             ticketSelected.addEventListener('click', () => {
+
+
+
                 ticketSelection();
                 console.log(shop)
 
@@ -146,7 +152,11 @@ buyButtons.forEach(btn => {
 
 
 const modalShop = document.querySelector('.modal-container ');
-let delButton = document.querySelectorAll('.delItem')
+let delButton = document.querySelectorAll('.delItem');
+const total = document.querySelector('.total');
+const modalShopContainer = document.getElementById('#modalShop-container');
+const divTotal = document.querySelector('.divTotal');
+const clearShop = document.querySelector('.clearShop');
 
 
 function showShop() {
@@ -174,44 +184,93 @@ function showShop() {
         `;
         modalShop.append(div);
 
-        const modalShopContainer = document.getElementById('#modalShop-container');
+
+
         if (modalShopContainer != '') {
             emptyShop.innerHTML = '';
+            divTotal.innerText = 'Total: $';
         }
-    
+
+        total.innerText = shop.reduce((acc, show) => acc + show.quantity * show.price, 0);
+
         refreshDelitem()
     });
 }
-
-
 
 function refreshDelitem() {
     delButton = document.querySelectorAll('.delItem')
     delButton.forEach(btn => {
         btn.addEventListener('click', deleteItem);
+
     });
+}
+
+function refreshShop() {
+    numberShop();
+    showShop();
+    if (shop.length == 0) {
+        emptyShop.innerHTML = 'Carrito Vacio';
+        divTotal.innerText = '';
+        total.innerText = '';
+    }
 }
 
 function deleteItem(e) {
     const idBtn = e.currentTarget.id;
     const delShow = shop.findIndex(show => show.id == idBtn);
-    shop.splice(delShow, 1);
-    numberShop();
-    showShop();
-    
-    if (shop.length == 0) {
-        emptyShop.innerHTML = 'Carrito Vacio'
-    }
 
+    shop.splice(delShow, 1);
+    refreshShop();
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+    Toast.fire({
+        icon: 'success',
+        title: 'Tickets eliminados del Carrito'
+    })
+ 
 }
 
 
 cart.addEventListener('click', () => {
     showShop();
-
 });
 
 
+clearShop.addEventListener('click', () => {
+
+    if (shop.length != 0) {
+        Swal.fire({
+            title: 'Estas seguro?',
+            text: "Se eliminaran todos los tickets seleccionados.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, vaciar carrito!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                shop.length = 0
+                refreshShop();
+                Swal.fire(
+                    'Carrito Vacio!',
+                    'Tu seleccion de tickets ha sido borrada.',
+                    'success'
+                )
+            }
+        })
+    } else {
+        Swal.fire('No hay ningun Ticket seleccionado!')
+    }
+});
 
 
 
