@@ -4,12 +4,18 @@ let shop = []
 let showSelected = []
 let numberTickets = ''
 
+/* Numero de items en Carrito */
 
+function numberShop() {
+    numberTickets = shop.length;
+    qtyTickets.innerText = numberTickets;
+}
+
+numberShop();
 
 /*Tarjetas de shows dinamicas  */
 
 const gridShows = document.querySelector('#gridShows');
-
 
 shows.forEach(show => {
     const article = document.createElement('article')
@@ -27,8 +33,6 @@ shows.forEach(show => {
         `
     gridShows.append(article);
 })
-
-
 
 
 
@@ -84,11 +88,9 @@ buyButtons.forEach(btn => {
                 </form>
             `
 
-            /* Agregar al carrito Ticket seleccionado */
+            /* Seleccion de Tickets */
 
             function ticketSelection() {
-
-
                 let sectorSelect = document.getElementById('sector-select').value;
                 let qtySelected = document.getElementById('qty-select').value;
                 showSelected.forEach(show => {
@@ -103,14 +105,7 @@ buyButtons.forEach(btn => {
                 })
 
                 shop.push(show);
-                console.log(shop)
                 numberShop();
-
-                /* guardar carrito en localstorage */
-
-                const shopJSON = JSON.stringify(shop);
-                localStorage.setItem('Seleccion de Tickets', shopJSON);
-
 
 
                 const Toast = Swal.mixin({
@@ -135,8 +130,7 @@ buyButtons.forEach(btn => {
             let ticketSelected = document.querySelector('.buyTicket');
             ticketSelected.addEventListener('click', () => {
                 ticketSelection();
-
-
+                console.log(shop)
 
 
             })
@@ -144,48 +138,20 @@ buyButtons.forEach(btn => {
     })
 })
 
-/* Actualizar numero en Carrito */
 
-const qtyTickets = document.querySelector('#qtyTickets');
-document.getElementById('qtyTickets').innerText = localStorage.getItem('Numero de Tickets')
-
-
-function numberShop() {
-
-    numberTickets = shop.length;
-    qtyTickets.innerText = numberTickets;
-    localStorage.setItem('Numero de Tickets', numberTickets);
-}
 
 
 
 /* Carrito */
 
 
-
-let modalShop = document.querySelector('.modal-container ');
-
-
+const modalShop = document.querySelector('.modal-container ');
+let delButton = document.querySelectorAll('.delItem')
 
 
-
-
-cart.addEventListener('click', () => {
-
-
+function showShop() {
 
     modalShop.innerHTML = '';
-
-
-
-    if (shop == '') {
-        const shopLs = localStorage.getItem('Seleccion de Tickets');
-        let shopObjet = JSON.parse(shopLs);
-        shop = shopObjet;
-
-    }
-
-
     shop.forEach((show) => {
         let div = document.createElement('div');
         div.classList.add('showShop');
@@ -195,7 +161,6 @@ cart.addEventListener('click', () => {
         div.innerHTML = `
         <div class="lineShop"></div>
         <div class = infoShop>
-
             <img class="imgShop" src="${show.img}" alt="Agar Agar">
             <div class="infoShop bandShop d-flex flex-column ">
                 <h5 class = showBand>${show.band}</h5>
@@ -204,25 +169,49 @@ cart.addEventListener('click', () => {
                 <h5 class = infoTicket>Precio: $${show.price}</h5>
                 <h5 class = infoTicket>Subtotal: $${show.subtotal}</h5>
             </div>
-            <a class="delItem bi bi-trash" id='${show.id}'></a>    
+            <a  class="delItem bi bi-trash" id='${show.id}'></a>    
         </div>
-
         `;
-      
         modalShop.append(div);
 
         const modalShopContainer = document.getElementById('#modalShop-container');
-
         if (modalShopContainer != '') {
             emptyShop.innerHTML = '';
         }
-      
-
-
+    
+        refreshDelitem()
     });
+}
 
+
+
+function refreshDelitem() {
+    delButton = document.querySelectorAll('.delItem')
+    delButton.forEach(btn => {
+        btn.addEventListener('click', deleteItem);
+    });
+}
+
+function deleteItem(e) {
+    const idBtn = e.currentTarget.id;
+    const delShow = shop.findIndex(show => show.id == idBtn);
+    shop.splice(delShow, 1);
+    numberShop();
+    showShop();
+    
+    if (shop.length == 0) {
+        emptyShop.innerHTML = 'Carrito Vacio'
+    }
+
+}
+
+
+cart.addEventListener('click', () => {
+    showShop();
 
 });
+
+
 
 
 
