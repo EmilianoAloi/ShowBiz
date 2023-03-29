@@ -1,54 +1,58 @@
-import { shows } from './objets.js'
+// import { shows } from './objets.js'
 
+let shows = []
 let shop = []
 let showSelected = []
-let numberTickets = ''
+let numberTickets = '';
 
-/* Numero de items en Carrito */
+
+fetch("./data.json")
+    .then((res) => res.json())
+    .then((data) => {
+        loadShows(data);
+    })
+
 
 function numberShop() {
     numberTickets = shop.length;
     qtyTickets.innerText = numberTickets;
+    shop.length === 0 ? qtyTickets.style.visibility = 'hidden' : qtyTickets.style.visibility = 'visible';
 }
 
 numberShop();
 
-/*Tarjetas de shows dinamicas  */
+function loadShows(data) {
 
-const gridShows = document.querySelector('#gridShows');
+    shows = data;
+    const gridShows = document.querySelector('#gridShows');
+    shows.forEach(show => {
+        const article = document.createElement('article')
+        article.classList.add('col-12');
+        article.classList.add('col-sm-3');
+        article.classList.add('card');
+        article.classList.add('mb-4');
+        article.innerHTML = `
+        <img src="${show.img}" class="card-img-top mt-3" alt="${show.band}">
+        <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">${show.band}</h5>
+            <p class="card-text">${show.date} - ${show.location}</p>
+            <button id = '${show.id}' class="btn btn-dark btn-show" data-bs-toggle="modal" data-bs-target="#staticBackdrop">COMPRAR TICKETS</button>
+        </div>
+            `
+        gridShows.append(article);
 
-shows.forEach(show => {
-    const article = document.createElement('article')
-    article.classList.add('col-12');
-    article.classList.add('col-sm-3');
-    article.classList.add('card');
-    article.classList.add('mb-4');
-    article.innerHTML = `
-    <img src="${show.img}" class="card-img-top mt-3" alt="${show.band}">
-    <div class="card-body d-flex flex-column align-items-center">
-        <h5 class="card-title">${show.band}</h5>
-        <p class="card-text">${show.date} - ${show.location}</p>
-        <button id = '${show.id}' class="btn btn-dark btn-show" data-bs-toggle="modal" data-bs-target="#staticBackdrop">COMPRAR TICKETS</button>
-    </div>
-        `
-    gridShows.append(article);
-})
-
-
-
-/* Modal de seleccion de tickets */
+    })
 
 
-const buyButtons = document.querySelectorAll('.btn-show');
+    const buyButtons = document.querySelectorAll('.btn-show');
 
-buyButtons.forEach(btn => {
-
-    btn.addEventListener('click', (e) => {
-        showSelected = shows.filter(show => show.id === e.currentTarget.id);
-
-        const modalShow = document.querySelector('.modal-body')
-        showSelected.forEach((show) => {
-            modalShow.innerHTML = `
+    buyButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            showSelected = shows.filter(show => show.id === e.currentTarget.id);
+            const modalShow = document.querySelector('.modal-body')
+            showSelected.forEach((show) => {
+                modalShow.innerHTML =
+                    `
                 <div class="container ">
                         <h3 class='ticket__band'>${show.band}</h3>
                     <div class=' containerTicket d-flex align-items-center justify-content-around'>
@@ -62,8 +66,7 @@ buyButtons.forEach(btn => {
                             <h4 class='ticket__info-texr'>Direccion: ${show.adress}</h4>
                         </div>
                     </div>
-                </div>
-                
+                </div>                
                 <form>
                 <div class="typeTickets d-flex flex-column container justify-content-betwen  mt-4 mb-5">
                     <button type="button" class="btn btn-dark btnTicket">UBICACION</button>
@@ -81,70 +84,59 @@ buyButtons.forEach(btn => {
                             <option value="3">3 entradas</option>
                             <option value="4">4 entradas</option>
                             <option value="5">5 entradas</option>
-
                         </select>
                     </div>
                     <button type="button" id = 'buyTicket' class="buyTicket btn btn-dark btnTicket align-self-center" data-bs-dismiss="modal" >AGREGAR A CARRITO</button>
                 </div>
-                </form>
+                </form>                
             `
 
-            /* Seleccion de Tickets */
+                /* Seleccion de Tickets */
 
-            function ticketSelection() {
-                let sectorSelect = document.getElementById('sector-select').value;
-                let qtySelected = document.getElementById('qty-select').value;
-                showSelected.forEach(show => {
-                    show.sector = sectorSelect
-                    show.quantity = qtySelected
-                    if (sectorSelect == 'Campo General') {
-                        show.price = 5000
-                    } else if (sectorSelect == 'Campo VIP') {
-                        show.price = 10000
-                    }
-                    show.subtotal = show.quantity * show.price
+                let ticketSelected = document.querySelector('.buyTicket');
+                ticketSelected.addEventListener('click', () => {
+                    ticketSelection();
                 })
 
+                function ticketSelection() {
 
+                    let sectorSelect = document.getElementById('sector-select').value;
+                    let qtySelected = document.getElementById('qty-select').value;
+                    showSelected.forEach(show => {
+                        show.sector = sectorSelect
+                        show.quantity = qtySelected
+                        if (sectorSelect == 'Campo General') {
+                            show.price = 5000
+                        } else if (sectorSelect == 'Campo VIP') {
+                            show.price = 10000
+                        }
+                        show.subtotal = show.quantity * show.price
+                    })
 
-                shop.push(show);
-                numberShop();
-                localstorageData();
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'bottom-end',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Tickets agregados al Carrito'
+                    })
 
-
-
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: 'bottom-end',
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                    }
-                })
-                Toast.fire({
-                    icon: 'success',
-                    title: 'Tickets agregados al Carrito'
-                })
-            }
-
-
-
-            let ticketSelected = document.querySelector('.buyTicket');
-            ticketSelected.addEventListener('click', () => {
-
-
-
-                ticketSelection();
-                console.log(shop)
-
-
+                    shop.push(show);
+                    numberShop();
+                    localStorageData();
+                }
             })
         })
     })
-})
+}
 
 
 
@@ -186,16 +178,12 @@ function showShop() {
         `;
         modalShop.append(div);
 
-
-
-
         if (modalShopContainer != '') {
             emptyShop.innerHTML = '';
             divTotal.innerText = 'Total: $';
         }
 
         total.innerText = shop.reduce((acc, show) => acc + show.quantity * show.price, 0);
-
         refreshDelitem();
     });
 }
@@ -204,18 +192,18 @@ function refreshDelitem() {
     delButton = document.querySelectorAll('.delItem')
     delButton.forEach(btn => {
         btn.addEventListener('click', deleteItem);
-
     });
 }
 
 function refreshShop() {
     numberShop();
     showShop();
+
     if (shop.length == 0) {
         emptyShop.innerHTML = 'Carrito Vacio';
         divTotal.innerText = '';
         total.innerText = '';
-        localstorageData();
+        localStorageData();
     }
 }
 
@@ -236,7 +224,7 @@ function deleteItem(e) {
         if (result.isConfirmed) {
             shop.splice(delShow, 1);
             refreshShop();
-            localstorageData();
+            localStorageData();
 
             Swal.fire(
                 'Listo!',
@@ -245,7 +233,6 @@ function deleteItem(e) {
             )
         }
     })
-
 }
 
 
@@ -282,9 +269,9 @@ clearShop.addEventListener('click', () => {
 });
 
 
-// LocalStorage 
 
-function localstorageData () {
+
+function localStorageData() {
     localStorage.setItem('Shop', JSON.stringify(shop))
 }
 
@@ -293,9 +280,6 @@ document.addEventListener('DOMContentLoaded', () => {
     numberShop();
 
 })
-
-
-
 
 
 
