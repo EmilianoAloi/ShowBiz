@@ -120,7 +120,6 @@ function cargarShows(data) {
                     shop.push(show);
                     console.log(shop)
                     numberShop();
-                    localstorageData();
 
 
 
@@ -257,7 +256,6 @@ function deleteItem(e) {
     }).then((result) => {
         if (result.isConfirmed) {
             shop.splice(delShow, 1);
-            localstorageData();
             refreshShop();
 
             Swal.fire(
@@ -290,7 +288,6 @@ clearShop.addEventListener('click', () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 shop.length = 0
-                localstorageData();
                 refreshShop();
                 Swal.fire(
                     'Carrito Vacio!',
