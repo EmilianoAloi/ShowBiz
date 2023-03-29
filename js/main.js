@@ -13,13 +13,14 @@ fetch("./data.json")
     })
 
 
+
+
 function numberShop() {
     numberTickets = shop.length;
     qtyTickets.innerText = numberTickets;
     shop.length === 0 ? qtyTickets.style.visibility = 'hidden' : qtyTickets.style.visibility = 'visible';
 }
 
-numberShop();
 
 function loadShows(data) {
 
@@ -128,17 +129,23 @@ function loadShows(data) {
                         icon: 'success',
                         title: 'Tickets agregados al Carrito'
                     })
-
+                    
                     shop.push(show);
                     numberShop();
-                    localStorageData();
+                    localstorageData();
+
                 }
+
+             
             })
         })
     })
+
+
+
 }
 
-
+numberShop();
 
 
 
@@ -178,6 +185,7 @@ function showShop() {
         `;
         modalShop.append(div);
 
+
         if (modalShopContainer != '') {
             emptyShop.innerHTML = '';
             divTotal.innerText = 'Total: $';
@@ -192,6 +200,7 @@ function refreshDelitem() {
     delButton = document.querySelectorAll('.delItem')
     delButton.forEach(btn => {
         btn.addEventListener('click', deleteItem);
+
     });
 }
 
@@ -203,8 +212,10 @@ function refreshShop() {
         emptyShop.innerHTML = 'Carrito Vacio';
         divTotal.innerText = '';
         total.innerText = '';
-        localStorageData();
+        localstorageData();
     }
+
+
 }
 
 function deleteItem(e) {
@@ -224,7 +235,7 @@ function deleteItem(e) {
         if (result.isConfirmed) {
             shop.splice(delShow, 1);
             refreshShop();
-            localStorageData();
+            localstorageData();
 
             Swal.fire(
                 'Listo!',
@@ -233,6 +244,7 @@ function deleteItem(e) {
             )
         }
     })
+
 }
 
 
@@ -269,9 +281,9 @@ clearShop.addEventListener('click', () => {
 });
 
 
+// LocalStorage 
 
-
-function localStorageData() {
+function localstorageData() {
     localStorage.setItem('Shop', JSON.stringify(shop))
 }
 
