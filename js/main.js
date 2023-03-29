@@ -236,6 +236,8 @@ function deleteItem(e) {
         if (result.isConfirmed) {
             shop.splice(delShow, 1);
             refreshShop();
+            localstorageData();
+
             Swal.fire(
                 'Listo!',
                 'El ticket ha sido eliminado',
