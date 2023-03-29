@@ -1,30 +1,23 @@
-// import { shows } from './objets.js'
-
 let shows = []
 let shop = []
 let showSelected = []
 let numberTickets = '';
 
 
+
+
 fetch("./data.json")
     .then((res) => res.json())
     .then((data) => {
-        loadShows(data);
+        cargarShows(data);
     })
 
 
 
 
-function numberShop() {
-    numberTickets = shop.length;
-    qtyTickets.innerText = numberTickets;
-    shop.length === 0 ? qtyTickets.style.visibility = 'hidden' : qtyTickets.style.visibility = 'visible';
-}
-
-
-function loadShows(data) {
-
+function cargarShows(data) {
     shows = data;
+
     const gridShows = document.querySelector('#gridShows');
     shows.forEach(show => {
         const article = document.createElement('article')
@@ -41,18 +34,23 @@ function loadShows(data) {
         </div>
             `
         gridShows.append(article);
-
     })
+    console.log(shows)
+
 
 
     const buyButtons = document.querySelectorAll('.btn-show');
 
+
+
     buyButtons.forEach(btn => {
+
         btn.addEventListener('click', (e) => {
             showSelected = shows.filter(show => show.id === e.currentTarget.id);
             const modalShow = document.querySelector('.modal-body')
             showSelected.forEach((show) => {
                 modalShow.innerHTML =
+
                     `
                 <div class="container ">
                         <h3 class='ticket__band'>${show.band}</h3>
@@ -67,7 +65,8 @@ function loadShows(data) {
                             <h4 class='ticket__info-texr'>Direccion: ${show.adress}</h4>
                         </div>
                     </div>
-                </div>                
+                </div>
+                
                 <form>
                 <div class="typeTickets d-flex flex-column container justify-content-betwen  mt-4 mb-5">
                     <button type="button" class="btn btn-dark btnTicket">UBICACION</button>
@@ -85,22 +84,24 @@ function loadShows(data) {
                             <option value="3">3 entradas</option>
                             <option value="4">4 entradas</option>
                             <option value="5">5 entradas</option>
+
                         </select>
                     </div>
                     <button type="button" id = 'buyTicket' class="buyTicket btn btn-dark btnTicket align-self-center" data-bs-dismiss="modal" >AGREGAR A CARRITO</button>
                 </div>
-                </form>                
+                </form>
+
+                
             `
+
+
+
+
+
 
                 /* Seleccion de Tickets */
 
-                let ticketSelected = document.querySelector('.buyTicket');
-                ticketSelected.addEventListener('click', () => {
-                    ticketSelection();
-                })
-
                 function ticketSelection() {
-
                     let sectorSelect = document.getElementById('sector-select').value;
                     let qtySelected = document.getElementById('qty-select').value;
                     showSelected.forEach(show => {
@@ -113,6 +114,15 @@ function loadShows(data) {
                         }
                         show.subtotal = show.quantity * show.price
                     })
+
+
+
+                    shop.push(show);
+                    console.log(shop)
+                    numberShop();
+                    localstorageData();
+
+
 
                     const Toast = Swal.mixin({
                         toast: true,
@@ -129,22 +139,36 @@ function loadShows(data) {
                         icon: 'success',
                         title: 'Tickets agregados al Carrito'
                     })
-                    
-                    shop.push(show);
-                    numberShop();
-                    localstorageData();
-
                 }
 
-             
+
+
+                let ticketSelected = document.querySelector('.buyTicket');
+                ticketSelected.addEventListener('click', () => {
+
+
+
+                    ticketSelection();
+
+
+                })
+
+
+            
+
             })
         })
     })
 
-
-
 }
 
+/* Numero de items en Carrito */
+
+function numberShop() {
+    numberTickets = shop.length;
+    qtyTickets.innerText = numberTickets;
+    shop.length === 0 ? qtyTickets.style.visibility = 'hidden' : qtyTickets.style.visibility = 'visible';
+}
 numberShop();
 
 
@@ -212,7 +236,6 @@ function refreshShop() {
         emptyShop.innerHTML = 'Carrito Vacio';
         divTotal.innerText = '';
         total.innerText = '';
-        localstorageData();
     }
 
 
@@ -234,8 +257,8 @@ function deleteItem(e) {
     }).then((result) => {
         if (result.isConfirmed) {
             shop.splice(delShow, 1);
-            refreshShop();
             localstorageData();
+            refreshShop();
 
             Swal.fire(
                 'Listo!',
@@ -267,6 +290,7 @@ clearShop.addEventListener('click', () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 shop.length = 0
+                localstorageData();
                 refreshShop();
                 Swal.fire(
                     'Carrito Vacio!',
@@ -281,18 +305,12 @@ clearShop.addEventListener('click', () => {
 });
 
 
-// LocalStorage 
+    // // LocalStorage 
 
-function localstorageData() {
-    localStorage.setItem('Shop', JSON.stringify(shop))
-}
+    // function localstorageData() {
+    //     localStorage.setItem('Shop', JSON.stringify(shop))
+    // }
 
-document.addEventListener('DOMContentLoaded', () => {
-    shop = JSON.parse(localStorage.getItem('Shop'))
-    numberShop();
-
-})
-
-
-
-
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     shop = JSON.parse(localStorage.getItem('Shop'))
+    // })
