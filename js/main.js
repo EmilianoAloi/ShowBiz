@@ -109,6 +109,8 @@ buyButtons.forEach(btn => {
 
                 shop.push(show);
                 numberShop();
+                localstorageData();
+
 
 
                 const Toast = Swal.mixin({
@@ -186,6 +188,7 @@ function showShop() {
 
 
 
+
         if (modalShopContainer != '') {
             emptyShop.innerHTML = '';
             divTotal.innerText = 'Total: $';
@@ -193,7 +196,7 @@ function showShop() {
 
         total.innerText = shop.reduce((acc, show) => acc + show.quantity * show.price, 0);
 
-        refreshDelitem()
+        refreshDelitem();
     });
 }
 
@@ -212,6 +215,7 @@ function refreshShop() {
         emptyShop.innerHTML = 'Carrito Vacio';
         divTotal.innerText = '';
         total.innerText = '';
+        localstorageData();
     }
 }
 
@@ -219,22 +223,25 @@ function deleteItem(e) {
     const idBtn = e.currentTarget.id;
     const delShow = shop.findIndex(show => show.id == idBtn);
 
-    shop.splice(delShow, 1);
-    refreshShop();
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'bottom-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
+
+    Swal.fire({
+        title: 'Estas seguro de eliminar Ticket?',
+        text: "",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si. Eliminar!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            shop.splice(delShow, 1);
+            refreshShop();
+            Swal.fire(
+                'Listo!',
+                'El ticket ha sido eliminado',
+                'success'
+            )
         }
-    })
-    Toast.fire({
-        icon: 'success',
-        title: 'Tickets eliminados del Carrito'
     })
 
 }
@@ -272,6 +279,18 @@ clearShop.addEventListener('click', () => {
     }
 });
 
+
+// LocalStorage 
+
+function localstorageData () {
+    localStorage.setItem('Shop', JSON.stringify(shop))
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    shop = JSON.parse(localStorage.getItem('Shop'))
+    numberShop();
+
+})
 
 
 

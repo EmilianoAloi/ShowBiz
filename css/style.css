@@ -495,6 +495,7 @@ header {
 .infoTicket {
     font-size: 13px;
     margin: 0;
+    width: 100px;
 }
 
 .delItem {
@@ -509,7 +510,7 @@ header {
 
 /* DESKTOP */
 
-@media (min-width: 850px) {
+@media (min-width: 1100px) {
 
 
     .navbar-brand {
