@@ -35,7 +35,6 @@ function cargarShows(data) {
             `
         gridShows.append(article);
     })
-    console.log(shows)
 
 
 
@@ -118,10 +117,9 @@ function cargarShows(data) {
 
 
                     shop.push(show);
-                    console.log(shop)
                     numberShop();
 
-
+                    localstorageData()
 
                     const Toast = Swal.mixin({
                         toast: true,
@@ -153,7 +151,7 @@ function cargarShows(data) {
                 })
 
 
-            
+
 
             })
         })
@@ -207,7 +205,7 @@ function showShop() {
         </div>
         `;
         modalShop.append(div);
-
+        localstorageData()
 
         if (modalShopContainer != '') {
             emptyShop.innerHTML = '';
@@ -257,7 +255,7 @@ function deleteItem(e) {
         if (result.isConfirmed) {
             shop.splice(delShow, 1);
             refreshShop();
-
+            localstorageData()
             Swal.fire(
                 'Listo!',
                 'El ticket ha sido eliminado',
@@ -288,6 +286,7 @@ clearShop.addEventListener('click', () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 shop.length = 0
+                localstorageData()
                 refreshShop();
                 Swal.fire(
                     'Carrito Vacio!',
@@ -302,12 +301,17 @@ clearShop.addEventListener('click', () => {
 });
 
 
-    // // LocalStorage 
+// LocalStorage 
 
-    // function localstorageData() {
-    //     localStorage.setItem('Shop', JSON.stringify(shop))
-    // }
+function localstorageData() {
+    localStorage.setItem('Shop', JSON.stringify(shop))
+    numberShop();
+}
 
-    // document.addEventListener('DOMContentLoaded', () => {
-    //     shop = JSON.parse(localStorage.getItem('Shop'))
-    // })
+document.addEventListener('DOMContentLoaded', () => {
+    let shopLs = JSON.parse(localStorage.getItem('Shop'))
+    if (shopLs) {
+        shop = shopLs
+        numberShop();
+    }
+})
