@@ -403,7 +403,7 @@ header {
 /* SHOP */
 
 .modalContentShop {
-    width: 345px;
+    width: 350px;
 
 }
 
@@ -420,7 +420,7 @@ header {
     background-image: url('../img/shopBack.jpg');
     color: white;
     height: max-content;
-    width: 345px;
+    width: 350px;
 
 }
 

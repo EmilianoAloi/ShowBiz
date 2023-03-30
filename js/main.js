@@ -214,6 +214,9 @@ function showShop() {
 
         total.innerText = shop.reduce((acc, show) => acc + show.quantity * show.price, 0);
         refreshDelitem();
+
+
+        
     });
 }
 
@@ -315,3 +318,29 @@ document.addEventListener('DOMContentLoaded', () => {
         numberShop();
     }
 })
+
+
+
+// COMPRAR
+
+const payment = document.querySelector('.portada__payment');
+
+
+
+
+
+
+
+
+
+
+
+// function pay () {
+
+// btnPay.addEventListener('click', () =>{
+
+// alert('compra')
+
+// })
+
+// }
