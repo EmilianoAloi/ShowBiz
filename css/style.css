@@ -505,7 +505,19 @@ header {
     margin-right: 5px;
 }
 
+    /* Datos de compra */
 
+  
+
+    .inputForm {
+        border-radius: 15px;
+        padding: 4px;
+    }
+
+    .selectForm {
+        border-radius: 15px;
+        padding: 4px;
+    }
 
 
 
@@ -780,6 +792,21 @@ header {
 
     }
 
-    
+    /* Datos de compra */
 
+    .columnForm {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .inputForm {
+        width: 400px;
+        border-radius: 15px;
+        padding: 8px;
+    }
+
+    .selectForm {
+        border-radius: 15px;
+        padding: 8px;
+    }
 }
