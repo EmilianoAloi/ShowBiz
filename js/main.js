@@ -4,15 +4,11 @@ let showSelected = []
 let numberTickets = '';
 
 
-
-
 fetch("./data.json")
     .then((res) => res.json())
     .then((data) => {
         cargarShows(data);
     })
-
-
 
 
 function cargarShows(data) {
@@ -114,11 +110,8 @@ function cargarShows(data) {
                         show.subtotal = show.quantity * show.price
                     })
 
-
-
                     shop.push(show);
                     numberShop();
-
                     localstorageData()
 
                     const Toast = Swal.mixin({
@@ -138,21 +131,11 @@ function cargarShows(data) {
                     })
                 }
 
-
-
                 let ticketSelected = document.querySelector('.buyTicket');
                 ticketSelected.addEventListener('click', () => {
 
-
-
                     ticketSelection();
-
-
                 })
-
-
-
-
             })
         })
     })
@@ -168,10 +151,7 @@ function numberShop() {
 }
 numberShop();
 
-
-
-/* Carrito */
-
+/* Shop */
 
 const modalShop = document.querySelector('.modal-container ');
 let delButton = document.querySelectorAll('.delItem');
@@ -179,9 +159,17 @@ const total = document.querySelector('.total');
 const modalShopContainer = document.getElementById('#modalShop-container');
 const divTotal = document.querySelector('.divTotal');
 const clearShop = document.querySelector('.clearShop');
-
+const btnPay = document.querySelector('.btnPay');
 
 function showShop() {
+
+    if (shop.length == 0) {
+        clearShop.classList.add('disabled');
+        btnPay.classList.add('disabled');
+    } else {
+        clearShop.classList.remove('disabled');
+        btnPay.classList.remove('disabled');
+    }
 
     modalShop.innerHTML = '';
     shop.forEach((show) => {
@@ -214,9 +202,6 @@ function showShop() {
 
         total.innerText = shop.reduce((acc, show) => acc + show.quantity * show.price, 0);
         refreshDelitem();
-
-
-        
     });
 }
 
@@ -224,7 +209,6 @@ function refreshDelitem() {
     delButton = document.querySelectorAll('.delItem')
     delButton.forEach(btn => {
         btn.addEventListener('click', deleteItem);
-
     });
 }
 
@@ -237,8 +221,6 @@ function refreshShop() {
         divTotal.innerText = '';
         total.innerText = '';
     }
-
-
 }
 
 function deleteItem(e) {
@@ -266,13 +248,13 @@ function deleteItem(e) {
             )
         }
     })
-
 }
 
 
 cart.addEventListener('click', () => {
     showShop();
 });
+
 
 
 clearShop.addEventListener('click', () => {
@@ -321,26 +303,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// COMPRAR
-
-const payment = document.querySelector('.portada__payment');
+// Validacion - Formulario de compra
 
 
+let inputForm = document.querySelectorAll('.inputForm');
+
+payForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+})
+
+terms.addEventListener('click', () => {
+    if (inputForm[0].value != '' && inputForm[1].value != '' && inputForm[2].value != '' && inputForm[3].value != '' && inputForm[4].value != '' && inputForm[5].value != '' && terms.checked == true) {
+        btnForm.classList.remove('disabled');
+    } else {
+        btnForm.classList.add('disabled');
+    }
+})
 
 
 
 
 
-
-
-
-
-// function pay () {
-
-// btnPay.addEventListener('click', () =>{
-
-// alert('compra')
-
-// })
-
-// }
