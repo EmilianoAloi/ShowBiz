@@ -101,7 +101,7 @@
                     </h6>
                 </div>
                 <div class="'btn">
-                    <a href="#shows" type="button" class="btn btn-primary  text-nowrap  mt-4 mb-5 ">VER MAS SHOWS</a>
+                    <a href="#shows" type="button" class="btn btn-primary  text-nowrap  mt-4 mb-5 ">VER SHOWS</a>
                 </div>
             </div>
         </section>
@@ -165,14 +165,16 @@
                         </div>
 
                         <h2 id="emptyShop" class=" text-center mt-5 mb-3">Carrito Vacio</h2>
+
+
                         <div class=" d-flex justify-content-center">
                             <h2 class="divTotal"></h2>
                             <h2 class="total text-center  mb-4"></h2>
                         </div>
                         <div class="d-flex justify-content-around align-items-center">
                             <button type="button" class=" clearShop btn btn-danger mt-2">Vaciar carrito</button>
-                            <button type="button" class="btn btn-lg btn-secondary btnPay  mt-3 mb-2"  data-bs-toggle="modal"
-                                data-bs-target="#modalPayment">Siguiente</button>
+                            <button type="button" class="btn btn-lg btn-secondary btnPay  mt-3 mb-2"
+                                data-bs-toggle="modal" data-bs-target="#modalPayment">Siguiente</button>
                         </div>
                     </div>
                 </div>
@@ -191,42 +193,39 @@
                         </div>
                         <div id="modalPayment-container" class="modalPayment-container">
 
-                            <!-- Content -->
-
+                            <!-- content -->
                             <form class="pt-1" id="payForm" action="">
-
                                 <div class="columnForm">
-
                                     <div>
                                         <div class="d-flex flex-column pb-3">
                                             <label for="nameUser" class="fw-bold pb-1"><i class="bi bi-person-fill"></i>
                                                 Nombre</label>
-                                            <input class="inputForm" type="text" id="nameUser" placeholder="David" required>
+                                            <input class="inputForm" type="text" id="nameUser" placeholder="David"
+                                                required>
                                         </div>
                                         <div class="d-flex flex-column pb-3">
                                             <label for="lastname" class="fw-bold pb-1"><i class="bi bi-person-fill"></i>
                                                 Apellido</label>
-                                            <input class="inputForm" type="text" id="lastName" placeholder="Cooper" required>
+                                            <input class="inputForm" type="text" id="lastName" placeholder="Cooper"
+                                                required>
                                         </div>
-
-
                                         <div class="d-flex flex-column pb-3">
                                             <label for="typeId" class="fw-bold pb-1"><i
                                                     class="bi bi-person-vcard-fill"></i>
                                                 Tipo de Identificacion</label>
-                                            <select class="selectForm" id="typeId" >
+                                            <select class="selectForm" id="typeId">
                                                 <option value="">DNI</option>
                                                 <option value="">LE</option>
                                                 <option value="">LC</option>
                                                 <option value="">CI</option>
                                             </select>
                                         </div>
-
                                         <div class="d-flex flex-column pb-3">
                                             <label for="numberId" class="fw-bold pb-1"><i
                                                     class="bi bi-person-vcard-fill"></i>
                                                 Numero de identificacion</label>
-                                            <input class="inputForm" type="text" id="numberId" placeholder="34538524" required>
+                                            <input class="inputForm" type="text" id="numberId" placeholder="34538524"
+                                                required>
                                         </div>
                                     </div>
                                     <div>
@@ -235,39 +234,35 @@
                                                 <label for="mailUser" class="fw-bold pb-1"><i
                                                         class="bi bi-envelope-at-fill"></i>
                                                     Correo electronico</label>
-                                                <input class="inputForm" type="email" id="mailUser" placeholder="david.cooper@gmail.com"
-                                                    required>
+                                                <input class="inputForm" type="email" id="mailUser"
+                                                    placeholder="david.cooper@gmail.com" required>
                                             </div>
                                         </div>
-
                                         <div>
                                             <div class="d-flex flex-column pb-3">
                                                 <label for="mailUser" class="fw-bold pb-1"><i
                                                         class="bi bi-envelope-at-fill"></i>
                                                     Confirmar correo</label>
-                                                <input class="inputForm" type="email" id="mailUser" placeholder="david.cooper@gmail.com"
-                                                    required>
+                                                <input class="inputForm" type="email" id="mailUser"
+                                                    placeholder="david.cooper@gmail.com" required>
                                             </div>
                                         </div>
-
-
                                         <div class="d-flex flex-column pb-3">
                                             <label for="telUser" class="fw-bold pb-1"><i
                                                     class="bi bi-telephone-fill"></i>
                                                 Telefono</label>
-                                            <input class="inputForm" type="text" id="telUser" placeholder="1164906307" required>
+                                            <input class="inputForm" type="text" id="telUser" placeholder="1164906307"
+                                                required>
                                         </div>
-
                                         <div class="d-flex flex-column pb-3">
                                             <label for="cityUser" class="fw-bold pb-1"><i
                                                     class="bi bi-geo-alt-fill"></i>
                                                 Lugar
                                                 de residencia</label>
-                                            <select class="selectForm" name="" id="cityUser" >
+                                            <select class="selectForm" name="" id="cityUser">
                                                 <option value="">Ciudad de Buenos Aires</option>
                                                 <option value="">Buenos Aires</option>
                                                 <option value="">Interior del Pais</option>
-
                                             </select>
                                         </div>
                                     </div>
@@ -277,13 +272,80 @@
                                         <label for="terms" class="fw-bold  pb-1">¿Acepta terminos y condiciones?</label>
                                         <input type="checkbox" id="terms" value="accept" required>
                                     </div>
-
                                     <div class="d-flex justify-content-around align-items-center">
-                                        <input id='btnForm' type="submit" value="Siguiente"
-                                            class="btn btn-lg btn-secondary btnPay disabled mt-3 mb-2 ">
+                                        <input id='btnForm' type="submit" value="Siguiente" data-bs-toggle="modal"
+                                            data-bs-target="#modalConfirm"
+                                            class="btn btn-lg btn-secondary btnPay  disabled mt-3 mb-2 ">
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Confirm -->
+
+        <div class="modal fade" id="modalConfirm" tabindex="-1" aria-labelledby="modalConfirm" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content shopBody">
+                    <div class="modal-body shopBody">
+                        <div class="d-flex align-items-center justify-content-between pb-4">
+                            <h1 class="modal-title fw-bold" id="">Confirma tu compra </h1>
+                            <button id="" class="btnClose " data-bs-dismiss="modal">X</button>
+                        </div>
+                        <div id="modalConfirm-container" class="modalConfirm-container">
+
+                            <!-- Content -->
+
+
+                            <!-- <h2 class="text-center pb-3">¡Ya casi es tuyo! Revisa tus datos</h2>
+
+                            <div class="d-flex">
+                                <h6 class="fw-bold">Nombre y Apellido: </h6>
+                                <h6>${nameUser.value} ${lastName.value}</h6>
+
+                            </div>
+
+                            <div class="d-flex">
+                                <h6 class="fw-bold">Identificacion: </h6>
+                                <h6>${typeId.value} ${numberId.value}</h6>
+
+                            </div>
+
+                            <div class="d-flex">
+
+                                <h6 class="fw-bold">Mail:</h6>
+                                <h6>${mailUser.value}</h6>
+
+                            </div>
+
+                            <div class="d-flex">
+
+                                <h6 class="fw-bold">Telefono:</h6>
+                                <h6>${telUser.value}</h6>
+
+                            </div>
+
+                            <div class="d-flex">
+
+                                <h6 class="fw-bold">Seleccion de Tickets:</h6>
+
+                            </div>
+
+                            <div class="d-flex">
+                                <h6 class="fw-bold">Total a pagar: </h6>
+                                <h6>$ </h6>
+                                <h6 class="fw-bold"></h6>
+                            </div>
+
+                            <div class="d-flex justify-content-around align-items-center">
+                                <button type="button" class="btn btn-lg btn-secondary btnPay  mt-3 mb-2"
+                                    data-bs-toggle="modal" data-bs-target="#modalCard">Siguiente</button>
+
+                            </div> -->
+
                         </div>
                     </div>
                 </div>

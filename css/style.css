@@ -503,6 +503,7 @@ header {
     font-size: 25px;
     margin-top: 40px;
     margin-right: 5px;
+    cursor: pointer;
 }
 
     /* Datos de compra */
@@ -588,9 +589,9 @@ header {
 
 
     .btn-primary {
-        font-size: 25px;
+        font-size: 35px;
         font-weight: 600;
-        width: 30rem;
+        width: 20rem;
         padding: 50px;
 
     }

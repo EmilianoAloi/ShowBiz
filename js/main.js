@@ -199,11 +199,14 @@ function showShop() {
             emptyShop.innerHTML = '';
             divTotal.innerText = 'Total: $';
         }
+        
 
         total.innerText = shop.reduce((acc, show) => acc + show.quantity * show.price, 0);
         refreshDelitem();
     });
 }
+
+
 
 function refreshDelitem() {
     delButton = document.querySelectorAll('.delItem')
@@ -217,7 +220,8 @@ function refreshShop() {
     showShop();
 
     if (shop.length == 0) {
-        emptyShop.innerHTML = 'Carrito Vacio';
+        emptyShop.innerHTML =  'Carrito Vacio'
+        
         divTotal.innerText = '';
         total.innerText = '';
     }
@@ -322,5 +326,79 @@ terms.addEventListener('click', () => {
 
 
 
+// Confirm form data
+
+const purchaseData = document.getElementById('modalConfirm-container');
+const div = document.createElement('div')
+
+div.innerHTML = ` 
+
+<h2 class="text-center pb-3">¡Ya casi es tuyo! Revisa tus datos</h2>
+
+<div class="d-flex">
+    <h6 class="fw-bold pe-2">Nombre y Apellido: </h6>
+    <h6>${nameUser.value} ${lastName.value}</h6>
+
+</div>
+
+<div class="d-flex">
+    <h6 class="fw-bold pe-2">Numero de ID: </h6>
+    <h6>${numberId.value}</h6>
+
+</div>
+
+<div class="d-flex">
+
+    <h6 class="fw-bold pe-2">Mail:</h6>
+    <h6>${mailUser.value}</h6>
+
+</div>
+
+<div class="d-flex">
+
+    <h6 class="fw-bold pe-2">Telefono:</h6>
+    <h6>${telUser.value}</h6>
+
+</div>
+
+<div class="d-flex">
+
+    <h6 class="fw-bold pe-2">Seleccion de Tickets:</h6>
+
+</div>
+
+<div class="d-flex pt-3">
+    <h6 class="fw-bold pe-2">Total a pagar: </h6>
+    <h6>$ </h6>
+    <h6 class="fw-bold pe-2"></h6>
+</div>
+
+<div class="d-flex justify-content-around align-items-center">
+    <button type="button" class="btn btn-lg btn-secondary btnPay  mt-3 mb-2"
+        data-bs-toggle="modal" data-bs-target="#modalCard">Siguiente</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+`
+
+purchaseData.append(div);
+
+
+
+
+
+// <h1>holalalal 
+// // // ${nameUser.value}
+// // // ${lastName.value}</h1>
+// // // ${numberId.value}
+// // // ${mailUser.value}
 
 
