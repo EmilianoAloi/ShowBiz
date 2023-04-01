@@ -284,7 +284,6 @@ header {
 }
 
 .modal-body {
-    height: 520px;
     border-radius: 30px;
     border: 2px solid;
     border-color: #789cefe0;
@@ -362,10 +361,9 @@ header {
     color: white;
     background-color: #5f13ee;
     width: 200px;
-    margin-top: 15px;
+    margin-top: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 5px;
 
 }
 
@@ -506,19 +504,20 @@ header {
     cursor: pointer;
 }
 
-    /* Datos de compra */
+/* Datos de compra */
 
-  
 
-    .inputForm {
-        border-radius: 15px;
-        padding: 4px;
-    }
 
-    .selectForm {
-        border-radius: 15px;
-        padding: 4px;
-    }
+.inputForm {
+    border-radius: 15px;
+    padding: 4px;
+}
+
+.selectForm {
+    border-radius: 15px;
+    padding: 4px;
+}
+
 
 
 
@@ -810,4 +809,19 @@ header {
         border-radius: 15px;
         padding: 8px;
     }
+
+    /* Confirm Info */
+
+
+    .modalConfirm-container h2 {
+        font-size: 40px;
+        margin-bottom: 0px;
+
+    }
+
+    .confirmInfo {
+        margin-left: 40%;
+    }
+
+
 }

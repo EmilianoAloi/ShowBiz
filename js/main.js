@@ -200,10 +200,10 @@ function showShop() {
             emptyShop.innerHTML = '';
             divTotal.innerText = 'Total: $';
         }
-        
+
         totalMount = shop.reduce((acc, show) => acc + show.quantity * show.price, 0);
         total.innerText = totalMount
-        // total.innerText = shop.reduce((acc, show) => acc + show.quantity * show.price, 0);
+
         refreshDelitem();
     });
 }
@@ -223,8 +223,8 @@ function refreshShop() {
     showShop();
 
     if (shop.length == 0) {
-        emptyShop.innerHTML =  'Carrito Vacio'
-        
+        emptyShop.innerHTML = 'Carrito Vacio'
+
         divTotal.innerText = '';
         total.innerText = '';
     }
@@ -338,14 +338,15 @@ terms.addEventListener('click', () => {
 const purchaseData = document.getElementById('modalConfirm-container');
 const div = document.createElement('div')
 
-function confirmData () {
+function confirmData() {
 
     div.innerHTML = ` 
 
-    <h2 class="text-center pb-3">¡Ya casi es tuyo! Revisa tus datos</h2>
+    <h2 class="text-center pb-3 pt-1">¡Ya casi es tuyo! Revisa tus datos</h2>
     
-<div class='d-flex flex-column  '>
+<div class='d-flex flex-column confirmInfo '>
 
+<div>
     <div class="d-flex">
         <h6 class="fw-bold pe-2">Nombre y Apellido: </h6>
         <h6>${nameUser.value} ${lastName.value}</h6>
@@ -371,30 +372,34 @@ function confirmData () {
         <h6>${telUser.value}</h6>
     
     </div>
-    
-    <div class="d-flex flex-column">
+</div>
+<div>    
+    <div class=" d-flex flex-column">
     
         <h6 class="fw-bold pe-2">Seleccion de Tickets:</h6>
-        <div id='eventSelection'></div>
+        <div id='eventSelection' class='d-flex gap-3'></div>
     
     </div>
     
-    <div class="d-flex pt-3">
-        <h6 class="fw-bold pe-2">Total a pagar:</h6>
-        <h6>$ </h6>
-        <h6 class="fw-bold pe-2">${totalMount}</h6>
+    <div class="d-flex  align-items-center pt-3">
+        <h4 class="fw-bold pe-2">Total a pagar:</h4>
+        <h4>$ </h4>
+        <h4 class="fw-bold pe-2">${totalMount}</h4>
+    </div>
     </div>
     
-    <div class="d-flex justify-content-around align-items-center">
-        <button type="button" class="btn btn-lg btn-secondary btnPay  mt-3 mb-2"
-            data-bs-toggle="modal" data-bs-target="#modalCard">Siguiente</button>
-    
-    </div>
+ 
      
     </div>
     
+
+    <div class="d-flex justify-content-around align-items-center">
+    <button id='btnConfirm' type="button" class="btn btn-lg btn-secondary btnPay  mt-3 mb-2" data-bs-dismiss="modal">Siguiente</button>
+
+</div>
+
     `
-    
+
     purchaseData.append(div);
 
     shop.forEach((show) => {
@@ -409,15 +414,32 @@ function confirmData () {
     })
 
 
+    btnConfirm.addEventListener('click', () => {
+        Swal.fire(
+            'Revisa tu casilla de email',
+            'Te enviamos el link de pago. Podes abonar con tarjetas de credito Visa, Mastercard o Amex. Gracias por tu compra :)',
+            'info'
+        )
 
+        localStorage.clear();
+        payForm.reset()
+        const finish = document.querySelector('.swal2-confirm')
+        finish.addEventListener('click', () => {
+
+            location.reload()
+        })
+
+    })
 
 
 }
 
-btnForm.addEventListener('click', () =>{
-confirmData ()
+btnForm.addEventListener('click', () => {
+    confirmData()
 
 })
+
+
 
 
 
