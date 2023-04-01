@@ -320,7 +320,7 @@ payForm.addEventListener('submit', (e) => {
 })
 
 terms.addEventListener('click', () => {
-    if (inputForm[0].value != '' && inputForm[1].value != '' && inputForm[2].value != '' && inputForm[3].value != '' && inputForm[4].value != '' && inputForm[5].value != '' && terms.checked == true) {
+    if (inputForm[0].value != '' && inputForm[1].value != '' && inputForm[2].value != '' && inputForm[3].value == inputForm[4].value  && inputForm[5].value != '' &&  terms.checked == true)  {
         btnForm.classList.remove('disabled');
     } else {
         btnForm.classList.add('disabled');
@@ -330,9 +330,6 @@ terms.addEventListener('click', () => {
 
 
 // Confirm form data
-
-
-
 
 
 const purchaseData = document.getElementById('modalConfirm-container');
