@@ -320,7 +320,10 @@ payForm.addEventListener('submit', (e) => {
 })
 
 terms.addEventListener('click', () => {
-    if (inputForm[0].value != '' && inputForm[1].value != '' && inputForm[2].value != '' && inputForm[3].value == inputForm[4].value  && inputForm[5].value != '' &&  terms.checked == true)  {
+    if (inputForm[0].value != '' && inputForm[1].value != '' && inputForm[2].value != '' && inputForm[3].value != '' && inputForm[4].value !='' && inputForm[5].value != '' &&  terms.checked == true)  {
+        btnForm.classList.remove('disabled');
+
+        if (terms.checked == false)
         btnForm.classList.remove('disabled');
     } else {
         btnForm.classList.add('disabled');
@@ -390,8 +393,11 @@ function confirmData() {
     </div>
     
 
-    <div class="d-flex justify-content-around align-items-center">
+    <div class="d-flex justify-content-center align-items-center gap-2">
+    <button id='btnPrev' type="button" class="btn btn-lg btn-secondary btnPay  mt-3 mb-2" data-bs-toggle="modal" data-bs-target="#modalPayment">Volver </button>
+
     <button id='btnConfirm' type="button" class="btn btn-lg btn-secondary btnPay  mt-3 mb-2" data-bs-dismiss="modal">Siguiente</button>
+
 
 </div>
 

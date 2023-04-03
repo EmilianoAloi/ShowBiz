@@ -168,11 +168,13 @@ header {
 
 .float {
     display: none;
+    border-radius: 15px;
 }
 
 .float2 {
     display: block;
     width: 250px;
+    border-radius: 15px;
 
     
 }
