@@ -420,9 +420,10 @@ function confirmData() {
     btnConfirm.addEventListener('click', () => {
         Swal.fire(
             'Revisa tu casilla de email',
-            'Te enviamos el link de pago. Podes abonar con tarjetas de credito Visa, Mastercard o Amex. Gracias por tu compra :)',
-            'info'
+            'Te enviamos el link de pago. <br> <br> Podes abonar con tarjetas de credito Visa, Mastercard o Amex. <br> Una vez hecho el pago te enviaremos cada QR para que puedas disfrutar la musica que mas te gusta :)',
+            'success'
         )
+        
 
         localStorage.clear();
         payForm.reset()
@@ -441,7 +442,6 @@ btnForm.addEventListener('click', () => {
     confirmData()
 
 })
-
 
 
 
