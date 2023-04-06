@@ -57,7 +57,7 @@ function cargarShows(data) {
                             <h4 class='ticket__info-texr'>Fecha: ${show.date}</h4>
                             <h4 class='ticket__info-texr'>Hora: ${show.eventTime}</h4>
                             <h4 class='ticket__info-texr'>Estadio: ${show.location}</h4>
-                            <h4 class='ticket__info-texr'>Direccion: ${show.adress}</h4>
+                            <h4 class='ticket__info-texr'>Dirección: ${show.adress}</h4>
                         </div>
                     </div>
                 </div>
@@ -236,7 +236,7 @@ function deleteItem(e) {
 
 
     Swal.fire({
-        title: 'Estas seguro de eliminar Ticket?',
+        title: '¿Estas seguro de eliminar Ticket?',
         text: "",
         icon: 'warning',
         showCancelButton: true,
@@ -268,7 +268,7 @@ clearShop.addEventListener('click', () => {
 
     if (shop.length != 0) {
         Swal.fire({
-            title: 'Estas seguro?',
+            title: '¿Estas seguro?',
             text: "Se eliminaran todos los tickets seleccionados.",
             icon: 'warning',
             showCancelButton: true,
@@ -282,7 +282,7 @@ clearShop.addEventListener('click', () => {
                 refreshShop();
                 Swal.fire(
                     'Carrito Vacio!',
-                    'Tu seleccion de tickets ha sido borrada.',
+                    'Tu selección de tickets ha sido borrada.',
                     'success'
                 )
             }
@@ -342,7 +342,7 @@ function confirmData() {
 
     div.innerHTML = ` 
 
-    <h2 class="text-center pb-3 pt-1">¡Ya casi es tuyo! Revisa tus datos</h2>
+    <h2 class="text-center pb-3 pt-1">¡Ya casi es tuyo! Revisá tus datos</h2>
     
 <div class='d-flex flex-column confirmInfo '>
 
@@ -354,7 +354,7 @@ function confirmData() {
     </div>
     
     <div class="d-flex">
-        <h6 class="fw-bold pe-2">Numero de ID: </h6>
+        <h6 class="fw-bold pe-2">Número de ID: </h6>
         <h6>${numberId.value}</h6>
     
     </div>
@@ -368,7 +368,7 @@ function confirmData() {
     
     <div class="d-flex">
     
-        <h6 class="fw-bold pe-2">Telefono:</h6>
+        <h6 class="fw-bold pe-2">Teléfono:</h6>
         <h6>${telUser.value}</h6>
     
     </div>
@@ -376,7 +376,7 @@ function confirmData() {
 <div>    
     <div class=" d-flex flex-column">
     
-        <h6 class="fw-bold pe-2">Seleccion de Tickets:</h6>
+        <h6 class="fw-bold pe-2">Selección de Tickets:</h6>
         <div id='eventSelection' class='d-flex gap-3'></div>
     
     </div>
@@ -419,8 +419,8 @@ function confirmData() {
 
     btnConfirm.addEventListener('click', () => {
         Swal.fire(
-            'Revisa tu casilla de email',
-            'Te enviamos el link de pago. <br> <br> Podes abonar con tarjetas de credito Visa, Mastercard o Amex. <br> Una vez hecho el pago te enviaremos cada QR para que puedas disfrutar la musica que mas te gusta :)',
+            'Revisá tu casilla de email',
+            'Te enviamos el link de pago. <br> <br> Podes abonar con tarjetas de crédito Visa, Mastercard o Amex. <br> Una vez hecho el pago te enviaremos cada QR para que puedas disfrutar la música que mas te gusta :)',
             'success'
         )
         
